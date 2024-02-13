@@ -1,7 +1,7 @@
 "use client";
 import { Post, allPosts } from ".contentlayer/generated";
 import PostItem from "../post-item";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function PostsSection(postList: Post[]) {
   const codingPosts = allPosts.filter(
@@ -27,31 +27,33 @@ export default function PostsSection(postList: Post[]) {
   let postsListType: String | undefined;
   let setPostsListType: any;
   [postsListType, setPostsListType] = useState();
-  let posts = postList;
+  let posts = allPosts;
 
-  useEffect(() => {
-    switch (postsListType) {
-      case "Coding":
-        posts = codingPosts;
-        break;
-      case "Tutorials":
-        posts = tutorialPosts;
-        break;
-      case "Startups":
-        posts = startupPosts;
-        break;
-      case "Opinion":
-        posts = opinionPosts;
-        break;
-      case "Indie-Hacking":
-        posts = indieHackingPosts;
-        break;
-    }
-  }, [postsListType]);
-
+  const setPosts = (type: String) => {
+    return (event: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
+      setPostsListType(type);
+      switch (postsListType) {
+        case "Coding":
+          posts = codingPosts;
+          break;
+        case "Tutorials":
+          posts = tutorialPosts;
+          break;
+        case "Startups":
+          posts = startupPosts;
+          break;
+        case "Opinion":
+          posts = opinionPosts;
+          break;
+        case "Indie-Hacking":
+          posts = indieHackingPosts;
+          break;
+      }
+    };
+  };
   // why cant I map over posts?
 
-  console.log(`posts: ${JSON.stringify(posts?.map((post) => post?.title))}`);
+  console.log(`posts: ${JSON.stringify(posts)}`);
 
   return (
     <section>
@@ -59,10 +61,7 @@ export default function PostsSection(postList: Post[]) {
 
       {/* Filters */}
       <ul className="flex flex-wrap text-sm border-b border-slate-100 dark:border-slate-800">
-        <li
-          className="px-3 -mb-px"
-          // onClick={setPostsListType("Opinion")}
-        >
+        <li className="px-3 -mb-px" onClick={setPosts("Opinion")}>
           <a
             className="block py-3 text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300"
             href="#0"
@@ -70,10 +69,7 @@ export default function PostsSection(postList: Post[]) {
             Opinion
           </a>
         </li>
-        <li
-          className="px-3 -mb-px"
-          // onClick={setPostsListType("Coding")}
-        >
+        <li className="px-3 -mb-px" onClick={setPosts("Coding")}>
           <a
             className="block py-3 font-medium text-slate-800 dark:text-slate-100 border-b-2 border-sky-500"
             href="#0"
@@ -81,10 +77,7 @@ export default function PostsSection(postList: Post[]) {
             Coding
           </a>
         </li>
-        <li
-          className="px-3 -mb-px"
-          // onClick={setPostsListType("Startups")}
-        >
+        <li className="px-3 -mb-px" onClick={setPosts("Startups")}>
           <a
             className="block py-3 text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300"
             href="#0"
@@ -92,10 +85,7 @@ export default function PostsSection(postList: Post[]) {
             Startups
           </a>
         </li>
-        <li
-          className="px-3 -mb-px"
-          // onClick={setPostsListType("Tutorials")}
-        >
+        <li className="px-3 -mb-px" onClick={setPosts("Tutorials")}>
           <a
             className="block py-3 text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300"
             href="#0"
@@ -103,10 +93,7 @@ export default function PostsSection(postList: Post[]) {
             Tutorials
           </a>
         </li>
-        <li
-          className="px-3 -mb-px"
-          // onClick={setPostsListType("Indie-Hacking")}
-        >
+        <li className="px-3 -mb-px" onClick={setPosts("Indie-Hacking")}>
           <a
             className="block py-3 text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300"
             href="#0"
@@ -118,8 +105,6 @@ export default function PostsSection(postList: Post[]) {
 
       {/* Articles list */}
       <div>
-        {/** Not sure why this is breaking */}
-        {/* {posts?.map((post) => post.title)} */}
         {posts?.map((post, postIndex) => (
           <PostItem key={postIndex} {...post} />
         ))}
