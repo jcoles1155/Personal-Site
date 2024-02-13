@@ -27,6 +27,8 @@ export default async function Home() {
     return new Date(a.publishedAt) > new Date(b.publishedAt) ? -1 : 1;
   });
 
+  console.log(`allPosts: ${allPosts}`);
+
   return (
     <>
       <Hero />

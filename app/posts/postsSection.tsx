@@ -49,6 +49,10 @@ export default function PostsSection(postList: Post[]) {
     }
   }, [postsListType]);
 
+  // why cant I map over posts?
+
+  console.log(`posts: ${JSON.stringify(posts?.map((post) => post?.title))}`);
+
   return (
     <section>
       <h2 className="font-aspekta text-xl font-[650] mb-3">Latest Articles</h2>
@@ -115,10 +119,10 @@ export default function PostsSection(postList: Post[]) {
       {/* Articles list */}
       <div>
         {/** Not sure why this is breaking */}
-        {posts?.map((post) => post.title)}
-        {/* {posts?.map((post, postIndex) => (
+        {/* {posts?.map((post) => post.title)} */}
+        {posts?.map((post, postIndex) => (
           <PostItem key={postIndex} {...post} />
-        ))} */}
+        ))}
       </div>
     </section>
   );
