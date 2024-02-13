@@ -1,6 +1,7 @@
-const { withContentlayer } = require('next-contentlayer')
+const withBuilderDevTools = require("@builder.io/dev-tools/next")();
+const { withContentlayer } = require("next-contentlayer");
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {};
 
-module.exports = withContentlayer(nextConfig)
+module.exports = withBuilderDevTools(withContentlayer(nextConfig));

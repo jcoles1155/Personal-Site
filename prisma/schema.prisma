@@ -1,0 +1,31 @@
+datasource db {
+  provider = "postgresql"
+  url = "postgres://default:y2gYAQi6tfra@ep-gentle-hat-a43x9fn4-pooler.us-east-1.aws.neon.tech/verceldb?pgbouncer=true&connect_timeout=15&sslmode=require" // uses connection pooling
+  directUrl = "postgres://default:y2gYAQi6tfra@ep-gentle-hat-a43x9fn4.us-east-1.aws.neon.tech/verceldb?sslmode=require" // uses a direct connection
+}
+
+model Post {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  title     String   @db.VarChar(255)
+  content   String?
+  published Boolean  @default(false)
+  author    User     @relation(fields: [authorId], references: [id])
+  authorId  Int
+}
+
+model Profile {
+  id     Int     @id @default(autoincrement())
+  bio    String?
+  user   User    @relation(fields: [userId], references: [id])
+  userId Int     @unique
+}
+
+model User {
+  id      Int      @id @default(autoincrement())
+  email   String   @unique
+  name    String?
+  posts   Post[]
+  profile Profile?
+}
