@@ -104,6 +104,14 @@ export default function PostsSection(postList: Post[]) {
             Indie Hacking
           </a>
         </li>
+        <li className="px-3 -mb-px">
+          <a
+            className="block py-3 text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300"
+            href="https://www.jctechresources.blog/"
+          >
+            Resources
+          </a>
+        </li>
       </ul>
 
       {/* Articles list */}
