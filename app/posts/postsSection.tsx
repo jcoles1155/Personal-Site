@@ -1,13 +1,10 @@
 "use client";
 import { Post, allPosts } from ".contentlayer/generated";
 import PostItem from "../post-item";
-import React, { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
-import Link from "next/link";
+import { useState } from "react";
+import { set } from "date-fns";
 
-export default function PostsSection({ ...props }) {
-  const pathname = usePathname();
-
+export default function PostsSection(postList: Post[]) {
   const codingPosts = allPosts.filter(
     (post) => post._raw.sourceFileDir === "Coding"
   );
@@ -28,65 +25,38 @@ export default function PostsSection({ ...props }) {
     (post) => post._raw.sourceFileDir === "Indie-Hacking"
   );
 
-  let postsListType: any;
+  let postsListType: String | undefined;
   let setPostsListType: any;
   [postsListType, setPostsListType] = useState();
   let posts = allPosts;
 
-  const handleClick = (e: string) => {
-    return (e: React.MouseEvent) => {
-      setPostsListType(e?.target);
-      e.preventDefault();
+  const [postsList, setPostsList] = useState(allPosts);
+
+  const setPosts = (type: String) => {
+    return (event: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
+      setPostsListType(type);
+      switch (postsListType) {
+        case "Coding":
+          setPostsList(codingPosts);
+          break;
+        case "Tutorials":
+          setPostsList(tutorialPosts);
+          break;
+        case "Startups":
+          setPostsList(startupPosts);
+          break;
+        case "Opinion":
+          setPostsList(opinionPosts);
+          break;
+        case "Indie-Hacking":
+          setPostsList(indieHackingPosts);
+          break;
+      }
     };
   };
+  // why cant I map over posts?
 
-  function stringify(obj: any) {
-    let cache: any[] | null = [];
-    let str = JSON.stringify(
-      obj,
-      function (key, value) {
-        if (typeof value === "object" && value !== null) {
-          if (cache && cache.indexOf(value) !== -1) {
-            // Circular reference found, discard key
-            return;
-          }
-          // Store value in our collection
-          if (cache) {
-            cache.push(value);
-          }
-        }
-        return value;
-      },
-      2
-    );
-    cache = null; // reset the cache
-    return str;
-  }
-
-  console.log(`postsListType: ${stringify(postsListType)}`);
-
-  useEffect(() => {
-    switch (postsListType) {
-      case "Coding":
-        posts = codingPosts;
-        break;
-      case "Tutorials":
-        posts = tutorialPosts;
-        break;
-      case "Startups":
-        posts = startupPosts;
-        break;
-      case "Opinion":
-        posts = opinionPosts;
-        break;
-      case "Indie-Hacking":
-        posts = indieHackingPosts;
-        break;
-      default:
-        posts = allPosts;
-        break;
-    }
-  }, [postsListType]);
+  console.log(`posts: ${JSON.stringify(posts)}`);
 
   return (
     <section>
@@ -94,56 +64,42 @@ export default function PostsSection({ ...props }) {
 
       {/* Filters */}
       <ul className="flex flex-wrap text-sm border-b border-slate-100 dark:border-slate-800">
-        <li className="px-3 -mb-px" onClick={handleClick("Opinion")}>
+        <li className="px-3 -mb-px" onClick={() => setPosts("Opinion")}>
           <a
             className="block py-3 text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300"
-            href="/#Opinion"
+            href="#0"
           >
             Opinion
           </a>
         </li>
-        <li className="px-3 -mb-px">
-          <Link
-            className={`block py-3 font-medium text-slate-800 dark:text-slate-100 border-b-2 border-sky-500 after:absolute after:w-0.5 after:right-0 after:top-0 after:bottom-0 ${
-              pathname === "/#Coding"
-                ? "text-sky-500 after:bg-sky-500"
-                : "text-slate-400 hover:text-slate-500 dark:text-slate-500 dark:hover:text-slate-400"
-            }`}
-            href="/#Coding"
+        <li className="px-3 -mb-px" onClick={() => setPosts("Coding")}>
+          <a
+            className="block py-3 font-medium text-slate-800 dark:text-slate-100 border-b-2 border-sky-500"
+            href="#0"
           >
             Coding
-          </Link>
+          </a>
         </li>
-        <li className="px-3 -mb-px">
+        <li className="px-3 -mb-px" onClick={() => setPosts("Startups")}>
           <a
-            className={`block py-3 font-medium text-slate-800 dark:text-slate-100 border-b-2 border-sky-500 after:absolute after:w-0.5 after:right-0 after:top-0 after:bottom-0 ${
-              pathname === "/#Startups"
-                ? "text-sky-500 after:bg-sky-500"
-                : "text-slate-400 hover:text-slate-500 dark:text-slate-500 dark:hover:text-slate-400"
-            }`}
-            href="/#Startups"
+            className="block py-3 text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300"
+            href="#0"
           >
             Startups
           </a>
         </li>
-        <li
-          className="px-3 -mb-px"
-          // onClick={setPostsListType("Tutorials")}
-        >
+        <li className="px-3 -mb-px" onClick={() => setPosts("Tutorials")}>
           <a
             className="block py-3 text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300"
-            href="/#Tutorials"
+            href="#0"
           >
             Tutorials
           </a>
         </li>
-        <li
-          className="px-3 -mb-px"
-          // onClick={setPostsListType("Indie-Hacking")}
-        >
+        <li className="px-3 -mb-px" onClick={() => setPosts("Indie-Hacking")}>
           <a
             className="block py-3 text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300"
-            href="#Indie-Hacking"
+            href="#0"
           >
             Indie Hacking
           </a>
