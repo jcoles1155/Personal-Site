@@ -1,9 +1,9 @@
-import Image from 'next/image'
-import Avatar01 from '@/public/images/avatar-01.jpg'
-import Avatar02 from '@/public/images/avatar-02.jpg'
-import Avatar03 from '@/public/images/avatar-03.jpg'
-import Avatar04 from '@/public/images/avatar-04.jpg'
-import Avatar05 from '@/public/images/avatar-05.jpg'
+import Image from "next/image";
+import Avatar01 from "@/public/images/avatar-01.jpg";
+import Avatar02 from "@/public/images/avatar-02.jpg";
+import Avatar03 from "@/public/images/avatar-03.jpg";
+import Avatar04 from "@/public/images/avatar-04.jpg";
+import Avatar05 from "@/public/images/avatar-05.jpg";
 
 export default function WidgetNewsletter() {
   return (
@@ -48,20 +48,33 @@ export default function WidgetNewsletter() {
         </div>
       </div>
       <div className="text-center mb-8">
-        <div className="font-aspekta font-[650] mb-1">Never miss an update!</div>
-        <p className="text-sm text-slate-500 dark:text-slate-400">Subscribe and join 100K+ developers.</p>
+        <div className="font-aspekta font-[650] mb-1">
+          Never miss an update!
+        </div>
+        <p className="text-sm text-slate-500 dark:text-slate-400">
+          Subscribe and join my mom who I know is on the list because I made her
+          join
+        </p>
       </div>
       <form>
         <div className="mb-2">
           <label className="sr-only" htmlFor="newsletter">
             Your email…
           </label>
-          <input id="newsletter" type="email" className="form-input py-1 w-full" placeholder="Your email…" />
+          <input
+            id="newsletter"
+            type="email"
+            className="form-input py-1 w-full"
+            placeholder="Your email…"
+          />
         </div>
-        <button className="btn-sm w-full  text-slate-100 bg-sky-500 hover:bg-sky-600" type="submit">
+        <button
+          className="btn-sm w-full  text-slate-100 bg-sky-500 hover:bg-sky-600"
+          type="submit"
+        >
           Subscribe
         </button>
       </form>
     </div>
-  )
+  );
 }

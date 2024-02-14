@@ -22,8 +22,8 @@ export default function Hero() {
             maker.
           </h1>
           <p className="text-lg text-slate-500 dark:text-slate-400">
-            Full Stack developer working on Real Estate and AI Apps. I write
-            about coding, startups, and my journey as a full-time maker.
+            Full Stack developer: surfing, traveling, and working on apps. I
+            write about coding, startups, and my journey as a maker.
           </p>
         </div>
       </div>

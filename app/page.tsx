@@ -42,8 +42,8 @@ export default async function Home() {
         <aside className="md:w-[240px] lg:w-[300px] shrink-0">
           <div className="space-y-6">
             <WidgetNewsletter />
-            <WidgetSponsor />
-            <WidgetBook />
+            {/* <WidgetSponsor /> */}
+            {/* <WidgetBook /> */}
           </div>
         </aside>
       </div>
