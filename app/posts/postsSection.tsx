@@ -1,9 +1,13 @@
 "use client";
 import { Post, allPosts } from ".contentlayer/generated";
 import PostItem from "../post-item";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 
-export default function PostsSection(postList: Post[]) {
+export default function PostsSection({ ...props }) {
+  const pathname = usePathname();
+
   const codingPosts = allPosts.filter(
     (post) => post._raw.sourceFileDir === "Coding"
   );
@@ -27,7 +31,39 @@ export default function PostsSection(postList: Post[]) {
   let postsListType: any;
   let setPostsListType: any;
   [postsListType, setPostsListType] = useState();
-  let posts = postList;
+  let posts = allPosts;
+
+  const handleClick = (e: string) => {
+    return (e: React.MouseEvent) => {
+      setPostsListType(e?.target);
+      e.preventDefault();
+    };
+  };
+
+  function stringify(obj: any) {
+    let cache: any[] | null = [];
+    let str = JSON.stringify(
+      obj,
+      function (key, value) {
+        if (typeof value === "object" && value !== null) {
+          if (cache && cache.indexOf(value) !== -1) {
+            // Circular reference found, discard key
+            return;
+          }
+          // Store value in our collection
+          if (cache) {
+            cache.push(value);
+          }
+        }
+        return value;
+      },
+      2
+    );
+    cache = null; // reset the cache
+    return str;
+  }
+
+  console.log(`postsListType: ${stringify(postsListType)}`);
 
   useEffect(() => {
     switch (postsListType) {
@@ -46,6 +82,9 @@ export default function PostsSection(postList: Post[]) {
       case "Indie-Hacking":
         posts = indieHackingPosts;
         break;
+      default:
+        posts = allPosts;
+        break;
     }
   }, [postsListType]);
 
@@ -55,35 +94,34 @@ export default function PostsSection(postList: Post[]) {
 
       {/* Filters */}
       <ul className="flex flex-wrap text-sm border-b border-slate-100 dark:border-slate-800">
-        <li
-          className="px-3 -mb-px"
-          // onClick={setPostsListType("Opinion")}
-        >
+        <li className="px-3 -mb-px" onClick={handleClick("Opinion")}>
           <a
             className="block py-3 text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300"
-            href="#0"
+            href="/#Opinion"
           >
             Opinion
           </a>
         </li>
-        <li
-          className="px-3 -mb-px"
-          // onClick={setPostsListType("Coding")}
-        >
-          <a
-            className="block py-3 font-medium text-slate-800 dark:text-slate-100 border-b-2 border-sky-500"
-            href="#0"
+        <li className="px-3 -mb-px">
+          <Link
+            className={`block py-3 font-medium text-slate-800 dark:text-slate-100 border-b-2 border-sky-500 after:absolute after:w-0.5 after:right-0 after:top-0 after:bottom-0 ${
+              pathname === "/#Coding"
+                ? "text-sky-500 after:bg-sky-500"
+                : "text-slate-400 hover:text-slate-500 dark:text-slate-500 dark:hover:text-slate-400"
+            }`}
+            href="/#Coding"
           >
             Coding
-          </a>
+          </Link>
         </li>
-        <li
-          className="px-3 -mb-px"
-          // onClick={setPostsListType("Startups")}
-        >
+        <li className="px-3 -mb-px">
           <a
-            className="block py-3 text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300"
-            href="#0"
+            className={`block py-3 font-medium text-slate-800 dark:text-slate-100 border-b-2 border-sky-500 after:absolute after:w-0.5 after:right-0 after:top-0 after:bottom-0 ${
+              pathname === "/#Startups"
+                ? "text-sky-500 after:bg-sky-500"
+                : "text-slate-400 hover:text-slate-500 dark:text-slate-500 dark:hover:text-slate-400"
+            }`}
+            href="/#Startups"
           >
             Startups
           </a>
@@ -94,7 +132,7 @@ export default function PostsSection(postList: Post[]) {
         >
           <a
             className="block py-3 text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300"
-            href="#0"
+            href="/#Tutorials"
           >
             Tutorials
           </a>
@@ -105,7 +143,7 @@ export default function PostsSection(postList: Post[]) {
         >
           <a
             className="block py-3 text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300"
-            href="#0"
+            href="#Indie-Hacking"
           >
             Indie Hacking
           </a>
@@ -114,11 +152,9 @@ export default function PostsSection(postList: Post[]) {
 
       {/* Articles list */}
       <div>
-        {/** Not sure why this is breaking */}
-        {posts?.map((post) => post.title)}
-        {/* {posts?.map((post, postIndex) => (
+        {posts?.map((post, postIndex) => (
           <PostItem key={postIndex} {...post} />
-        ))} */}
+        ))}
       </div>
     </section>
   );
