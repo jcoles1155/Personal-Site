@@ -14,7 +14,7 @@ export default function PostItem({ ...props }) {
           <h3 className="font-aspekta text-lg font-[650] mb-1">
             <Link
               className="inline-flex relative hover:text-sky-500 duration-150 ease-out before:scale-x-0 before:origin-center before:absolute before:inset-0 before:bg-sky-200 dark:before:bg-sky-500 before:opacity-30 before:-z-10 before:translate-y-1/4 before:-rotate-2 hover:before:scale-100 before:duration-150 before:ease-in-out"
-              href={`/posts/${props.slug}`}
+              href={`/posts/${props.slug.split("/")[1]}`}
             >
               {props.title}
             </Link>

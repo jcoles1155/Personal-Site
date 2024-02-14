@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: {
 export default async function SinglePost({ params }: {
   params: { slug: string }
 }) {
-  const post = allPosts.find((post) => post.slug === params.slug)
+  const post = allPosts.find((post) => post.slug.split("/")[1] === params.slug)
 
   if (!post) notFound()
 
