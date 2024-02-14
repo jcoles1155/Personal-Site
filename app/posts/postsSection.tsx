@@ -4,59 +4,47 @@ import PostItem from "../post-item";
 import { useState } from "react";
 import { set } from "date-fns";
 
-export default function PostsSection(postList: Post[]) {
-  const codingPosts = allPosts.filter(
-    (post) => post._raw.sourceFileDir === "Coding"
-  );
+const tabs = [
+  {
+    name: "All",
+  },
+  {
+    name: "Opinion",
+  },
+  {
+    name: "Coding",
+  },
+  {
+    name: "Startups",
+  },
+  {
+    name: "Tutorials",
+  },
+  {
+    name: "Indie Hacking",
+  },
+  {
+    name: "Resources",
+    link: "https://www.jctechresources.blog/",
+  },
+];
 
-  const tutorialPosts = allPosts.filter(
-    (post) => post._raw.sourceFileDir === "Tutorials"
-  );
-
-  const startupPosts = allPosts.filter(
-    (post) => post._raw.sourceFileDir === "Startups"
-  );
-
-  const opinionPosts = allPosts.filter(
-    (post) => post._raw.sourceFileDir === "Opinion"
-  );
-
-  const indieHackingPosts = allPosts.filter(
-    (post) => post._raw.sourceFileDir === "Indie-Hacking"
-  );
-
-  let postsListType: String | undefined;
-  let setPostsListType: any;
-  [postsListType, setPostsListType] = useState();
-  let posts = allPosts;
-
+export default function PostsSection() {
+  const [postsListType, setPostsListType] = useState("All");
   const [postsList, setPostsList] = useState(allPosts);
 
   const setPosts = (type: String) => {
-    return (event: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
-      setPostsListType(type);
-      switch (postsListType) {
-        case "Coding":
-          setPostsList(codingPosts);
-          break;
-        case "Tutorials":
-          setPostsList(tutorialPosts);
-          break;
-        case "Startups":
-          setPostsList(startupPosts);
-          break;
-        case "Opinion":
-          setPostsList(opinionPosts);
-          break;
-        case "Indie-Hacking":
-          setPostsList(indieHackingPosts);
-          break;
-      }
-    };
-  };
-  // why cant I map over posts?
+    setPostsListType(type as string);
 
-  console.log(`posts: ${JSON.stringify(posts)}`);
+    if (type !== "All") {
+      const filteredPosts = allPosts.filter(
+        (post) => post._raw.sourceFileDir === type
+      );
+      setPostsList(filteredPosts);
+    } else {
+      setPostsList(allPosts);
+    }
+  };
 
   return (
     <section>
@@ -64,59 +52,31 @@ export default function PostsSection(postList: Post[]) {
 
       {/* Filters */}
       <ul className="flex flex-wrap text-sm border-b border-slate-100 dark:border-slate-800">
-        <li className="px-3 -mb-px" onClick={() => setPosts("Opinion")}>
-          <a
-            className="block py-3 text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300"
-            href="#0"
+        {tabs.map((tab) => (
+          <li
+            className="px-3 -mb-px cursor-pointer"
+            onClick={() => setPosts(tab.name)}
           >
-            Opinion
-          </a>
-        </li>
-        <li className="px-3 -mb-px" onClick={() => setPosts("Coding")}>
-          <a
-            className="block py-3 font-medium text-slate-800 dark:text-slate-100 border-b-2 border-sky-500"
-            href="#0"
-          >
-            Coding
-          </a>
-        </li>
-        <li className="px-3 -mb-px" onClick={() => setPosts("Startups")}>
-          <a
-            className="block py-3 text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300"
-            href="#0"
-          >
-            Startups
-          </a>
-        </li>
-        <li className="px-3 -mb-px" onClick={() => setPosts("Tutorials")}>
-          <a
-            className="block py-3 text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300"
-            href="#0"
-          >
-            Tutorials
-          </a>
-        </li>
-        <li className="px-3 -mb-px" onClick={() => setPosts("Indie-Hacking")}>
-          <a
-            className="block py-3 text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300"
-            href="#0"
-          >
-            Indie Hacking
-          </a>
-        </li>
-        <li className="px-3 -mb-px">
-          <a
-            className="block py-3 text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300"
-            href="https://www.jctechresources.blog/"
-          >
-            Resources
-          </a>
-        </li>
+            <a
+              className={`block py-3 text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300${
+                tab.name === postsListType ? " border-b-2 border-sky-500" : ""
+              }`}
+              href={tab.link && tab.link}
+            >
+              {tab.name}
+            </a>
+          </li>
+        ))}
       </ul>
 
       {/* Articles list */}
+      {postsList.length < 1 ? (
+        <h4 className="text-center text-sm pt-6">No Article Found</h4>
+      ) : (
+        ""
+      )}
       <div>
-        {posts?.map((post, postIndex) => (
+        {postsList?.map((post, postIndex) => (
           <PostItem key={postIndex} {...post} />
         ))}
       </div>
