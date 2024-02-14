@@ -55,7 +55,7 @@ export default function PostsSection() {
         {tabs.map((tab) => (
           <li
             className="px-3 -mb-px cursor-pointer"
-            onClick={() => setPosts(tab.name)}
+            {...(!tab.link ? { onClick: () => setPosts(tab.name) } : {})}
           >
             <a
               className={`block py-3 text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300${
