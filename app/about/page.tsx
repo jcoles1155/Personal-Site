@@ -1,7 +1,7 @@
 import Image from "next/image";
 import WidgetNewsletter from "@/components/widget-newsletter";
 import WidgetSponsor from "@/components/widget-sponsor";
-import AboutImg from "@/public/images/Personal_website_header.png";
+import AboutImg from "@/public/images/personal_website_header.png";
 import Experience from "@/components/experience";
 
 export const metadata = {
