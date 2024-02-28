@@ -1,15 +1,22 @@
-import Link from 'next/link'
-import Image from 'next/image'
-import PostDate from '@/components/post-date'
+import Link from "next/link";
+import Image from "next/image";
+import PostDate from "@/components/post-date";
 
 export default function PostItem({ ...props }) {
   return (
     <article className="py-5 border-b border-slate-100 dark:border-slate-800">
       <div className="flex items-start">
-        <Image className="rounded w-16 h-16 sm:w-[88px] sm:h-[88px] object-cover mr-6" src={props.image} width={88} height={88} alt={props.title} />
+        <Image
+          className="rounded w-16 h-16 sm:w-[88px] sm:h-[88px] object-cover mr-6"
+          src={props.image}
+          width={88}
+          height={88}
+          alt={props.title}
+        />
         <div>
           <div className="text-xs text-slate-500 uppercase mb-1">
-            <span className="text-sky-500">—</span> <PostDate dateString={props.publishedAt} />
+            <span className="text-sky-500">—</span>{" "}
+            <PostDate dateString={props.publishedAt} />
           </div>
           <h3 className="font-aspekta text-lg font-[650] mb-1">
             <Link
@@ -20,8 +27,15 @@ export default function PostItem({ ...props }) {
             </Link>
           </h3>
           <div className="flex">
-            <div className="grow text-sm text-slate-500 dark:text-slate-400">{props.summary}</div>
-            <Link className="hidden lg:flex shrink-0 text-sky-500 items-center justify-center w-12 group" href={`/posts/${props.slug}`} tabIndex={-1}>
+            <div className="grow text-sm text-slate-500 dark:text-slate-400">
+              {props.summary}
+            </div>
+            <Link
+              className="hidden lg:flex shrink-0 text-sky-500 items-center justify-center w-12 group"
+              href={`/posts/${props.slug}`}
+              tabIndex={-1}
+            >
+              {/* biome-ignore lint/a11y/noSvgWithoutTitle: <explanation> */}
               <svg
                 className="fill-current group-hover:translate-x-2 duration-150 ease-in-out"
                 xmlns="http://www.w3.org/2000/svg"
@@ -35,5 +49,5 @@ export default function PostItem({ ...props }) {
         </div>
       </div>
     </article>
-  )
+  );
 }

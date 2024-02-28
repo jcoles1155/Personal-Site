@@ -21,9 +21,9 @@ export default function Projects() {
     {
       id: 0,
       icon: Icon01,
-      slug: "#0",
-      title: "Container Tinkering",
-      excerpt: "Solutions for running containers locally and remotely.",
+      slug: "idea-center",
+      title: "Idea Center",
+      excerpt: "A place to share and validate your ideas with the world.",
       openSource: true,
     },
     {

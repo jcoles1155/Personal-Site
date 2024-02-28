@@ -52,6 +52,7 @@ export default async function SinglePost({
               href="/"
             >
               <span className="sr-only">Back</span>
+              {/* biome-ignore lint/a11y/noSvgWithoutTitle: <explanation> */}
               <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34">
                 <path
                   className="fill-current"
@@ -80,6 +81,7 @@ export default async function SinglePost({
                       href="#0"
                       aria-label="Twitter"
                     >
+                      {/* biome-ignore lint/a11y/noSvgWithoutTitle: <explanation> */}
                       <svg
                         className="w-8 h-8 fill-current"
                         viewBox="0 0 32 32"
@@ -95,6 +97,7 @@ export default async function SinglePost({
                       href="#0"
                       aria-label="Facebook"
                     >
+                      {/* biome-ignore lint/a11y/noSvgWithoutTitle: <explanation> */}
                       <svg
                         className="w-8 h-8 fill-current"
                         viewBox="0 0 32 32"
@@ -110,6 +113,7 @@ export default async function SinglePost({
                       href="#0"
                       aria-label="Share"
                     >
+                      {/* biome-ignore lint/a11y/noSvgWithoutTitle: <explanation> */}
                       <svg
                         className="w-8 h-8 fill-current"
                         viewBox="0 0 32 32"

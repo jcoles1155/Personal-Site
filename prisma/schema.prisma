@@ -13,6 +13,20 @@ model Post {
   published Boolean  @default(false)
   author    User     @relation(fields: [authorId], references: [id])
   authorId  Int
+  slug      String   @unique
+}
+
+model Project {
+  id         Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  name        String
+  description String?
+  author        User     @relation(fields: [authorId], references: [id])
+  authorId      Int
+  comingSoon    Boolean  @default(false)
+  href          String?
+  image         String?
+  published     Boolean  @default(false)
 }
 
 model Profile {
@@ -27,5 +41,6 @@ model User {
   email   String   @unique
   name    String?
   posts   Post[]
+  projects Project[]
   profile Profile?
 }

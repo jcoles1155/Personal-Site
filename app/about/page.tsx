@@ -37,14 +37,14 @@ export default function About() {
                   Short Bio
                 </h2>
                 <p>
-                  I'm a software engineer with more than 5 years of experience
+                  I'm a software engineer with more about 5 years of experience
                   in a variety of domains. For the past few years, I've focused
                   on logistics software in a high paced coding environment -
                   tinkering with infrastructure, and all things containers.
                 </p>
                 <p>
                   While there isn't a Wikipedia page about me (sorry folks!), a
-                  media bio is available below.
+                  short bio is available below.
                 </p>
               </div>
               <div className="space-y-4">
