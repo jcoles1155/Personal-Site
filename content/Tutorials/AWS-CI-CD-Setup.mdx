@@ -1,0 +1,133 @@
+---
+title: "CI/CD Flow w/ Github Actions to EC2 w/ Ubuntu Docker and Nginx"
+publishedAt: "2024-02-24"
+image: "/images/dev-ops.png"
+summary: "Setup for a CI/CD flow with Github Actions to an EC2 with Ubuntu, Docker, and Nginx. For use with:"
+---
+
+# CI/CD Flow w/ Github Actions to EC2 w/ Ubuntu Docker and Nginx
+
+---
+
+For use with: https://github.com/Two-Trees-Digital/turbo-temp
+
+### **EC2 Setup**
+
+1. Go to Amazon account and create a new EC2
+2. Choose the Ubuntu option
+3. Choose a system size that suits your project needs
+   1. Medium and below is probably the most you’ll need with hobby projects
+4. Create a .pem permissions file to be able to ssh into the system
+5. Allot 12-20 GBs of space for system
+6. Create Instance
+7. Once Instance is created, go ahead and open a terminal where the .pem file got downloaded
+   1. Probably /user/downloads
+8. Press ‘connect to instance’ and select the ssh tab
+   1. Copy paste that command into terminal
+9. You’ve now connected to your instance
+10. Proceed with downloading Docker
+
+### **Docker**
+
+1. https://docs.docker.com/engine/install/ubuntu/
+
+**Nginx EC2**
+
+1. https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-20-04
+2. Once through setup, you’ll need to go into your config file and input your settings
+
+   ```jsx
+   cd / etc / nginx;
+   ```
+
+   ```jsx
+   cd sites-available
+   ```
+
+   ```jsx
+   ls;
+   ```
+
+3. You’ll see a file named default here
+
+   1. We want to delete this
+
+   ```jsx
+   sudo rm -rf default
+   ```
+
+4. We now create a new default file with:
+
+   ```jsx
+   sudo nano default
+   ```
+
+5. Copy pasta your config settings:
+
+Config File:
+
+```jsx
+`server {``listen 80;``location / {``proxy_pass http://127.0.0.1:3000;``}``location /api/v1 {``rewrite ^/api/v1(/.*)$ $1 break;``proxy_pass http://127.0.0.1:3001;``}``location /dashboard/ {``rewrite ^/dashboard(/.*)$ $1 break;``proxy_pass http://127.0.0.1:3002;``}``}`;
+```
+
+1. Write out w/ ‘ctrl + O’
+2. Exit w/ ‘ctrl + X’
+3. We now want to cd out and into sites-enabled and delete the default file there too
+
+   ```jsx
+   cd ..
+   ```
+
+   ```jsx
+   cd sites-enabled
+   ```
+
+   ```jsx
+   sudo rm -rf default
+   ```
+
+4. Now we’re going to run a link command
+
+Link Command:
+
+```jsx
+sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+```
+
+1.  Now restart the nginx server and we’re good to go!
+
+Nginx Command:
+
+```jsx
+sudo /etc/init.d/nginx start
+```
+
+```jsx
+sudo /etc/init.d/nginx restart
+```
+
+### **Github Actions**
+
+Set up of the actions are pretty straight forward
+
+1. Go to your github repository, and go to the **settings tab**
+2. Then go to **Actions > Runners**
+3. Create **New Self-Hosted Runner**
+4. Input the commands it prompts you with 1 by 1 at the root of your EC2
+5. After **sudo ./svc.sh start**
+   1. Check the runners tab again to see your idle runner ready to go
+
+### **Building the project**
+
+1. Running **sudo docker ps** shows there isn’t a built image of a container yet in the EC2
+2. Make a test commit to the production or main branch of your code
+   1. Check the Actions tab in your repository to see a workflow run has been created
+3. After the initial build completes, which may take a while, give **sudo docker ps** another try to see your container created!
+
+### Building Image
+
+```jsx
+docker-compose build turbo-temp
+
+docker-compose up --no-deps -d turbo-temp
+```

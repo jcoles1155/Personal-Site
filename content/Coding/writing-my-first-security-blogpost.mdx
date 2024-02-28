@@ -1,77 +1,60 @@
 ---
-title: "Writing My First Security Blogpost"
-publishedAt: "2023-12-21"
+title: "2024 Coding Roadmap"
+publishedAt: "2024-01-22"
 image: "/images/post-thumb-04.jpg"
 summary: "Flexbox is a remarkably flexible layout mode. When we understand how it works, we can build responsive designs that rearrange themselves as needed."
 ---
 
-Flexbox is a remarkably flexible layout mode. When we understand how it works, we can build responsive designs that rearrange themselves as needed.
+## 2024 Coding Roadmap
 
-![Post](/images/post-image.jpg)
+---
 
-Web designers sometimes believe that animating in CSS is more difficult than animating in JavaScript. **While CSS animation does have some limitations**, most of the time it's more capable than we give it credit for! Not to mention, typically more performant.
+Roadmap to Unleash Your Inner Code Warrior in 2024
 
-Coupled with a touch of JavaScript, CSS animations and transitions are able to accomplish hardware-accelerated animations and interactions more efficiently than most JavaScript libraries. Let's jump straight in!
+Are you ready to embark on an exciting and fulfilling journey into the world of coding? By learning to code, you can unlock a world of endless possibilities and unleash your inner potential as a developer. Whether your passion lies in web development, mobile app development, desktop app development, hardware and IoT, game development, machine learning, or systems engineering, there is a roadmap waiting for you. In this comprehensive guide, we will take you through seven roadmaps that will help you navigate the vast and ever-evolving coding universe, enabling you to become a skilled and versatile developer.
 
-Let's jump straight in!
+### Web Development: Embrace the Power of the Web
 
-Manipulating CSS Transitions
-----------------------------
+- Technologies Used: HTML, CSS, JavaScript
 
-There are countless questions on coding forums related to triggering and pausing an element's transition. The solution is actually quite simple using JavaScript.
+Web development is a dynamic and ever-growing field where you will learn the foundations of HTML, CSS, and JavaScript to build captivating and interactive websites. From creating stunning user interfaces to optimizing performance, you will conquer the challenges of debugging and browser compatibility while crafting engaging user experiences. In this roadmap, you will become proficient in front-end and back-end development, mastering frameworks and tools that will empower you to bring your ideas to life on the web.
 
-To trigger an element's transition, toggle a class name on that element that triggers it.
+### Mobile App Development: Conquer the Mobile World
 
-To pause an element's transition, use getComputedStyle and getPropertyValue at the point in the transition you want to pause it. [Then set those CSS properties](#0) of that element equal to those values you just got.
+- Technologies Used: Swift, Java, Kotlin
 
-Using CSS “Callback Functions”
-------------------------------
+In the age of smartphones and tablets, mobile app development offers an exciting and lucrative path for developers. By diving into languages such as Swift, Java, or Kotlin, you will learn to create visually appealing and user-friendly interfaces for iOS and Android platforms. This roadmap will teach you the art of crafting pixel-perfect designs, implementing seamless navigation, and optimizing performance for mobile devices. Be prepared to tackle challenges such as the infamous infinite scroll trap, where you can easily lose track of time swiping through endless cat pictures!
 
-Some of the most useful yet little-known JavaScript tricks for manipulating CSS transitions and animations are the DOM events they fire. Like: **animationend, animationstart, and animationiteration for animations** and transitionend for transitions. You might guess what they do. These animation events fire when the animation on an element ends, starts, or completes one iteration, respectively.
+### Desktop App Development: Build Powerful Applications
 
-These events need to be vendor prefixed at this time, so in this demo, we use a function developed by Craig Buckler called PrefixedEvent, which has the parameters element, type, and callback to help make these events cross-browser. Here is his useful article on capturing CSS animations with JavaScript. And [here is another one](#0) determining which animation (name) the event is firing for.
+- Technologies Used: Swift, .NET
 
-Manipulating CSS Transitions
-----------------------------
+Do you dream of creating robust and feature-rich desktop applications that can revolutionize the way people work? In this roadmap, you will enter the realm of desktop app development, where you will develop applications for platforms like Mac and Windows. From building user-friendly interfaces to leveraging platform-specific APIs, you will navigate the treacherous waters of desktop app development. But beware of the dreaded Blue Screen of Death and occasional crashes! With great power comes great responsibility, but the satisfaction of delivering powerful desktop applications will make it all worthwhile.
 
-Like we just learned, we can watch elements and react to animation-related events: animationStart, animationIteration, and animationEnd. But what happens if you want to change the CSS animation mid-animation? This requires a bit of trickery!
+### Hardware and IoT: Explore the World of Physical Computing
 
-### The animation-play-state Property
+- Technologies Used: Raspberry Pi, Linux, Python
 
-The animation-play-state property of CSS is incredibly helpful when you simply need to pause an animation and potentially continue it later. You can change that CSS through JavaScript like this (mind your prefixes):
+If you have a passion for tinkering with electronics and want to create real-world applications, the hardware and IoT roadmap is for you. Strap on your coding goggles and get ready to build your own robot army! Starting with a Raspberry Pi, you will learn the secrets of the Linux operating system and gain the knowledge to connect circuits and control them using your Python code. But be cautious! Make sure your robot army doesn't gain sentience and take over the world. We've all seen those movies!
 
-```js title="js/main.js"
-element.style.webkitAnimationPlayState = "paused";
-element.style.webkitAnimationPlayState = "running";
-```
+### Game Development: Level Up Your Coding Skills
 
-### Obtaining the Current Keyvalue Percentage
+- Technologies Used: Unity, Godot
 
-Unfortunately, at this time, there is no way to get the exact current “percentage completed” of a CSS keyframe animation. **The best method to approximate it is using a setInterval function** that iterates 100 times during the animation, which is essentially: the animation duration in ms / 100. For example, if the animation is 4 seconds long, then the setInterval needs to run every 40 milliseconds (4000/100).
+Enter the thrilling world of game development and become the hero of your own coding saga. In this roadmap, you will equip yourself with powerful game development engines like Unity or Godot and master the art of game physics, 3D modeling, and animation. But beware, as you venture deeper into the realm of game development, you'll face the ultimate challenge: defeating the final boss known as "The Bug that Ruins Everything." Be prepared for epic battles and countless hours of debugging as you strive to create immersive and captivating gaming experiences.
 
-```js
-var showPercent = window.setInterval(function() {
-  if (currentPercent < 100) {
-    currentPercent += 1;
-  } else {
-    currentPercent = 0;
-  }
-  // Updates a div that displays the current percent
-  result.innerHTML = currentPercent;
-}, 40);
-```
+### Machine Learning: Unleash the Power of Artificial Intelligence
 
-Use Your Head
--------------
+- Technologies Used: Python, Pandas, TensorFlow, PyTorch
 
-Before starting to code, thinking about and planning how a transition or animation should run is the best way to minimize your problems and get the effect you desire. Even better than Googling for solutions later! The techniques and tricks overviewed in this article may not always be the best way to create the animation your project calls for.
+Ready to explore the cutting-edge field of machine learning and artificial intelligence? This roadmap will take you on a journey through the wonders of data science and the power of neural networks. Starting with Python, you will learn to manipulate and analyze data using libraries like Pandas. Then, you will unleash the full potential of artificial intelligence with frameworks like TensorFlow or PyTorch. But remember, with great power comes great responsibility. Don't let your robot dog become too intelligent, or you might end up taking orders from it!
 
-Here's a little example of **where getting clever with HTML and CSS** alone can solve a problem where you might have thought to go to JavaScript.
+### Systems Engineering: Master Low-Level Programming
 
-In Conclusion
--------------
+- Technologies Used: C
 
-*   Developers used to need to choose between CSS and JavaScript.
-*   In JavaScript, CSS transitions are generally easier to work with than CSS animations.
-*   CSS Matrices are generally a pain to deal with, especially for beginners.
-*   Thinking about what should be done and planning how to do it.
+For those who are brave enough to delve into the dark arts of low-level programming, systems engineering awaits you. In this roadmap, you will learn the ancient language of C and become a master of memory management and algorithm implementation. As you face the formidable dragons known as technical interviews, remember to keep your wits about you. It's a trial by fire, but emerging victorious will earn you the title of "Badass Developer" and open doors to a world of complex systems and high-performance computing.
+
+---
+
+Congratulations, aspiring developers! You now have a roadmap to guide you on your coding adventure. Whether you specialize in web development, mobile app development, desktop app development, hardware and IoT, game development, machine learning, or systems engineering, remember to enjoy the process of creation and let your imagination soar. So, grab your coding sword and shield, join the vibrant community of fellow developers, and embark on your thrilling coding journey!
