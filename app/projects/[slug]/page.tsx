@@ -37,7 +37,7 @@ export default async function SingleProject({
 
   console.log(`project: ${JSON.stringify(project)}`);
 
-  console.log(`slug: ${project.slug}`);
+  console.log(`slug: ${params.slug}`);
 
   if (!project) notFound();
 
