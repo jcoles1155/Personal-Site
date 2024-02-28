@@ -36,7 +36,7 @@ export default async function SinglePost({
 }: {
   params: { slug: string };
 }) {
-  const post = allPosts.find((post) => post.slug.split("/")[1] === params.slug);
+  const post = allPosts.find((post) => post.slug === params.slug);
 
   if (!post) notFound();
 

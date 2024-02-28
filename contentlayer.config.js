@@ -2,10 +2,12 @@ import { defineDocumentType, makeSource } from "contentlayer/source-files";
 import remarkGfm from "remark-gfm";
 import rehypePrettyCode from "rehype-pretty-code";
 import rehypeSlug from "rehype-slug";
+import slugify from "slugify";
+
 
 const Project = defineDocumentType(() => ({
   name: "Project",
-  filePathPattern: `Projects/*.mdx`,
+  filePathPattern: `Projects/**/*.mdx`,
   contentType: "mdx",
   fields: {
     name: {
@@ -44,7 +46,7 @@ const Project = defineDocumentType(() => ({
   computedFields: {
     slug: {
       type: "string",
-      resolve: (doc) => doc._raw.flattenedPath,
+      resolve: (doc) => slugify(doc.name, { lower: true }),
     },
   },
 }));
@@ -74,7 +76,7 @@ const Post = defineDocumentType(() => ({
   computedFields: {
     slug: {
       type: "string",
-      resolve: (doc) => doc._raw.flattenedPath,
+      resolve: (doc) => slugify(doc.title, { lower: true }),
     },
   },
 }));
