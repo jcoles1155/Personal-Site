@@ -40,7 +40,7 @@ export default function About() {
             <div className="text-slate-500 dark:text-slate-400 space-y-8">
               <div className="space-y-4">
                 <h2 className="h3 font-aspekta text-slate-800 dark:text-slate-100">
-                  Short Bio
+                  Lil Bio
                 </h2>
                 <p>
                   I'm a software engineer with more about 5 years of experience
@@ -49,8 +49,8 @@ export default function About() {
                   tinkering with infrastructure, and all things containers.
                 </p>
                 <p>
-                  While there isn't a Wikipedia page about me (sorry folks!), a
-                  short bio is available below.
+                  While there isn't a Wikipedia page about me (sorry folks!),
+                  hopefully this lil intro helps!
                 </p>
               </div>
               <div className="space-y-4">
