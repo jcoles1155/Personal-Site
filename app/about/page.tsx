@@ -97,7 +97,7 @@ export default function About() {
 
               <div className="space-y-4">
                 <h2 className="h3 font-aspekta text-slate-800 dark:text-slate-100">
-                  Let's Connect
+                  Let's Connect!
                 </h2>
                 <p>
                   I'm excited to connect with anyone looking to build, or who
