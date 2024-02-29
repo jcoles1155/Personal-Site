@@ -56,6 +56,15 @@ export default function Projects() {
       openSource: false,
       comingSoon: true,
     },
+    {
+      id: 4,
+      icon: Icon03,
+      slug: "https://www.farrouttradeworks.com/",
+      title: "farrouttradeworks.com",
+      excerpt: "Construction company landing page with NextJS",
+      openSource: false,
+      comingSoon: true,
+    },
   ];
 
   const items02 = [
