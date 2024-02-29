@@ -4,7 +4,7 @@ import WidgetSponsor from "@/components/widget-sponsor";
 
 import Icon01 from "@/public/images/project-icon-01.svg";
 import Icon02 from "@/public/images/project-icon-02.svg";
-import Icon03 from "@/public/images/project-icon-03.svg";
+import Icon03 from "@/public/images/farrout-screenshot.png";
 import Icon04 from "@/public/images/project-icon-04.svg";
 import Icon05 from "@/public/images/project-icon-05.svg";
 import Icon06 from "@/public/images/project-icon-06.svg";
@@ -59,11 +59,12 @@ export default function Projects() {
     {
       id: 4,
       icon: Icon03,
-      slug: "https://www.farrouttradeworks.com/",
+      slug: "farrout-tradeworks",
       title: "farrouttradeworks.com",
       excerpt: "Construction company landing page with NextJS",
       openSource: false,
       comingSoon: true,
+      href: "https://farrouttradeworks.com",
     },
   ];
 

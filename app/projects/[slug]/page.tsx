@@ -101,7 +101,7 @@ export default async function SingleProject({
         <div className="space-y-6">
           {/* <WidgetNewsletter /> */}
           {/* <WidgetSponsor /> */}
-          <WidgetPosts />
+          {/* <WidgetPosts /> */}
         </div>
       </aside>
     </div>
