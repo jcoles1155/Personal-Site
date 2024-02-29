@@ -21,7 +21,7 @@ export default function Projects() {
     {
       id: 1,
       icon: Icon01,
-      slug: "re-chart",
+      slug: "#0",
       title: "rechart.com",
       excerpt:
         "AI Rehab cost and reporting platform for real estate investors and flippers",
@@ -33,7 +33,7 @@ export default function Projects() {
       icon: Icon01,
       slug: "idea-center",
       title: "icvta.com",
-      excerpt: "Platform for Idea Center Ventura to manage projects and ideas",
+      excerpt: "Platform for Idea Center users to manage projects and ideas",
       openSource: true,
       comingSoon: true,
     },
@@ -149,7 +149,7 @@ export default function Projects() {
       {/* Right sidebar */}
       <aside className="md:w-[240px] lg:w-[300px] shrink-0">
         <div className="space-y-6">
-          <WidgetNewsletter />
+          {/* <WidgetNewsletter /> */}
           {/* <WidgetSponsor /> */}
         </div>
       </aside>

@@ -19,9 +19,15 @@ export default function About() {
             {/* Page title */}
             <h1 className="h1 font-aspekta mb-5">
               Hi. I'm JC Coles 🤟{" "}
-              <span className="inline-flex relative text-sky-500 before:absolute before:inset-0 before:bg-sky-200 dark:before:bg-sky-500 before:opacity-30 before:-z-10 before:-rotate-2 before:translate-y-1/4">
-                @jc_coles
-              </span>{" "}
+              <a
+                href="https://www.instagram.com/jc_coles/?hl=en"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span className="inline-flex relative text-sky-500 before:absolute before:inset-0 before:bg-sky-200 dark:before:bg-sky-500 before:opacity-30 before:-z-10 before:-rotate-2 before:translate-y-1/4">
+                  @jc_coles
+                </span>{" "}
+              </a>
             </h1>
             <Image
               className="w-full"
@@ -120,7 +126,7 @@ export default function About() {
       {/* Right sidebar */}
       <aside className="md:w-[240px] lg:w-[300px] shrink-0">
         <div className="space-y-6">
-          <WidgetNewsletter />
+          {/* <WidgetNewsletter /> */}
           {/* <WidgetSponsor /> */}
         </div>
       </aside>

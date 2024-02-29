@@ -27,9 +27,8 @@ export default function Subscribe() {
               {/* Page content */}
               <div className="text-slate-500 dark:text-slate-400 space-y-8">
                 <p className="text-lg">
-                  This newsletter is written by Mark Ivings, who previously
-                  worked at Google, Medium, Vimeo, and Qonto. Here is what to
-                  expect by subscribing:
+                  This newsletter is written by JC Coles. Here is what to expect
+                  by subscribing:
                 </p>
                 <ul className="space-y-4">
                   <li className="flex items-start">
@@ -40,9 +39,7 @@ export default function Subscribe() {
                     >
                       <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                     </svg>
-                    <span>
-                      Big tech and high-growth startups, from the inside.
-                    </span>
+                    <span>High Groth Startup Opinion.</span>
                   </li>
                   <li className="flex items-start">
                     <svg
@@ -54,7 +51,7 @@ export default function Subscribe() {
                     </svg>
                     <span>
                       Actionable advice for engineering managers, software
-                      engineers and tech workers.
+                      engineers and tech teams.
                     </span>
                   </li>
                   <li className="flex items-start">
@@ -66,18 +63,8 @@ export default function Subscribe() {
                       <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                     </svg>
                     <span>
-                      A pulse on the tech market and scoop worth knowing.
+                      A pulse on the tech market and scoop on emerging tech.
                     </span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg
-                      className="w-3 h-3 fill-current text-sky-500 mr-3 mt-1.5 shrink-0"
-                      viewBox="0 0 12 12"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
-                    </svg>
-                    <span>An independent viewpoint.</span>
                   </li>
                 </ul>
                 <div>
@@ -136,7 +123,7 @@ export default function Subscribe() {
                       />
                     </div>
                     <div className="text-sm text-slate-500 ml-3">
-                      Join 100K+ developers.
+                      Join the community!
                     </div>
                   </div>
                 </div>

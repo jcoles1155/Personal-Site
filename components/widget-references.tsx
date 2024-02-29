@@ -11,7 +11,7 @@ export default function WidgetReferences() {
         <li>
           <a
             className="flex justify-between items-center space-x-2 group"
-            href="#0"
+            href="https://www.linkedin.com/in/brianmatthewgonzalez/"
           >
             <div className="grow flex items-center space-x-3 truncate">
               <Image
@@ -45,7 +45,7 @@ export default function WidgetReferences() {
         <li>
           <a
             className="flex justify-between items-center space-x-2 group"
-            href="#0"
+            href="https://www.linkedin.com/in/singharjan/"
           >
             <div className="grow flex items-center space-x-3 truncate">
               <Image
@@ -79,7 +79,7 @@ export default function WidgetReferences() {
         <li>
           <a
             className="flex justify-between items-center space-x-2 group"
-            href="#0"
+            href="https://www.linkedin.com/in/ntutak/"
           >
             <div className="grow flex items-center space-x-3 truncate">
               <Image

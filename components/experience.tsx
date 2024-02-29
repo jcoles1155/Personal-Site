@@ -25,9 +25,12 @@ export default function Experience() {
               <div className="font-aspekta font-[650] text-slate-800 dark:text-slate-100">
                 Full Stack Software Engineer
               </div>
-              <div className="text-sm font-medium text-slate-800 dark:text-slate-100">
-                Curri
-              </div>
+              <a href="https://www.curri.com/" target="_blank" rel="noreferrer">
+                <div className="text-sm font-medium text-slate-800 dark:text-slate-100">
+                  Curri
+                </div>
+              </a>
+
               <div className="text-sm text-slate-500 dark:text-slate-400">
                 Worked in Next, GraphQl, PostgresQl and Prisma, building next
                 generation logistics software. Got the opportunity to contribute
@@ -88,9 +91,16 @@ export default function Experience() {
               <div className="font-aspekta font-[650] text-slate-800 dark:text-slate-100">
                 Network Technician
               </div>
-              <div className="text-sm font-medium text-slate-800 dark:text-slate-100">
-                Surfline
-              </div>
+              <a
+                href="https://www.surfline.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <div className="text-sm font-medium text-slate-800 dark:text-slate-100">
+                  Surfline
+                </div>
+              </a>
+
               <div className="text-sm text-slate-500 dark:text-slate-400">
                 Maintained cameras and servers from Malibu to Santa Barbara.
                 Whenever cameras went down or needed maintenence, I was called.

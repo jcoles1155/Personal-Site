@@ -135,7 +135,7 @@ export default async function SinglePost({
       {/* Right sidebar */}
       <aside className="md:w-[240px] lg:w-[300px] shrink-0">
         <div className="space-y-6">
-          <WidgetNewsletter />
+          {/* <WidgetNewsletter /> */}
           {/* <WidgetSponsor /> */}
           <WidgetPosts />
         </div>
