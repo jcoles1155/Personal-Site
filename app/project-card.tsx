@@ -8,6 +8,7 @@ interface Item {
   title: string;
   excerpt: string;
   openSource?: boolean;
+  comingSoon?: boolean;
 }
 
 interface ItemProps {
@@ -26,6 +27,11 @@ export default function ProjectCard({ item }: ItemProps) {
             <div className="h-10 w-10 flex items-center justify-center border border-slate-200 dark:border-slate-700 rounded-full mb-2">
               <Image src={item.icon} width={18} alt={item.title} />
             </div>
+            {item.comingSoon && (
+              <div className="text-xs inline-flex items-center font-medium bg-purple-200 text-purple-600 rounded-full text-center px-2 h-5">
+                Coming Soon
+              </div>
+            )}
             {item.openSource && (
               <div className="text-xs inline-flex items-center font-medium bg-green-100 text-green-600 rounded-full text-center px-2 h-5">
                 Open-Source

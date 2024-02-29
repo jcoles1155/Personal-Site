@@ -24,7 +24,7 @@ const tabs = [
     name: "Indie Hacking",
   },
   {
-    name: "Resources",
+    name: "Notion Resources 📝",
     link: "https://www.jctechresources.blog/",
   },
 ];

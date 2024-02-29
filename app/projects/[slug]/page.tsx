@@ -4,6 +4,7 @@ import { allProjects } from "contentlayer/generated";
 import { Metadata } from "next";
 import WidgetNewsletter from "@/components/widget-newsletter";
 import WidgetPosts from "@/components/widget-posts";
+import { Mdx } from "@/components/mdx/mdx";
 
 export async function generateStaticParams() {
   return allProjects.map((project) => ({
@@ -34,10 +35,6 @@ export default async function SingleProject({
   params: { slug: string };
 }) {
   const project = allProjects.find((project) => project.slug === params.slug);
-
-  console.log(`project: ${JSON.stringify(project)}`);
-
-  console.log(`slug: ${params.slug}`);
 
   if (!project) notFound();
 
@@ -74,6 +71,16 @@ export default async function SingleProject({
               </div>
               {/* Post title */}
               <h1 className="h1 font-aspekta mb-5">{project.name}</h1>
+              {/* Post image */}
+              <div className="mb-8">
+                <a href={project.href}>
+                  <img
+                    className="rounded-lg"
+                    src={project.image}
+                    alt={project.name}
+                  />
+                </a>
+              </div>
               {/* Post content */}
               <div className="text-slate-500 dark:text-slate-400 space-y-8">
                 <div className="space-y-4">
@@ -81,6 +88,7 @@ export default async function SingleProject({
                     Description
                   </h2>
                   <p>{project.description}</p>
+                  <Mdx code={project.body.code} />
                 </div>
               </div>
             </header>

@@ -19,32 +19,46 @@ export const metadata = {
 export default function Projects() {
   const items01 = [
     {
-      id: 0,
+      id: 1,
       icon: Icon01,
-      slug: "idea-center",
-      title: "Idea Center",
-      excerpt: "A place to share and validate your ideas with the world.",
-      openSource: true,
+      slug: "re-chart",
+      title: "rechart.com",
+      excerpt:
+        "AI Rehab cost and reporting platform for real estate investors and flippers",
+      openSource: false,
+      comingSoon: true,
     },
     {
-      id: 0,
+      id: 1,
+      icon: Icon01,
+      slug: "idea-center",
+      title: "icvta.com",
+      excerpt: "Platform for Idea Center Ventura to manage projects and ideas",
+      openSource: true,
+      comingSoon: true,
+    },
+    {
+      id: 2,
       icon: Icon02,
       slug: "#0",
-      title: "Engine Prototypes",
-      excerpt: "Solutions for running containers locally and remotely.",
+      title: "yamhillridge.com",
+      excerpt: "React Three Fiber 3D experience for a farm in Oregon",
       openSource: false,
+      comingSoon: true,
+    },
+    {
+      id: 3,
+      icon: Icon03,
+      slug: "#0",
+      title: "chainstitch.com",
+      excerpt:
+        "Ecommerce Website for local chain stitch embroidery clothing brand",
+      openSource: false,
+      comingSoon: true,
     },
   ];
 
   const items02 = [
-    {
-      id: 0,
-      icon: Icon03,
-      slug: "#0",
-      title: "PixelOkay",
-      excerpt: "Code assets and services for people, with people.",
-      openSource: false,
-    },
     {
       id: 1,
       icon: Icon04,
@@ -52,6 +66,7 @@ export default function Projects() {
       title: "Storybook",
       excerpt: "Storybook helps you develop, test, and document UIs.",
       openSource: false,
+      comingSoon: true,
     },
     {
       id: 2,
@@ -59,32 +74,36 @@ export default function Projects() {
       slug: "#0",
       title: "Knowledge AI",
       excerpt:
-        "Instantly answers all questions based on your internal knowledge bases.",
-      openSource: false,
+        "Instantly answers all questions based on your internal knowledge base.",
+      openSource: true,
+      comingSoon: true,
     },
     {
       id: 3,
       icon: Icon06,
       slug: "#0",
-      title: "Security Frame",
-      excerpt: "Automated security compliance for your business.",
+      title: "Convex App",
+      excerpt: "Template to do app with convex",
       openSource: false,
+      comingSoon: true,
     },
     {
       id: 4,
       icon: Icon07,
-      slug: "#0",
-      title: "KanbanOK",
-      excerpt: "The most powerful kanban board ever invented.",
-      openSource: false,
+      slug: "turbo-temp",
+      title: "turbo temp",
+      excerpt:
+        "Custom turbo repo template with Next, GQl, Prisma, NextAuth, and Postgresql",
+      openSource: true,
     },
     {
       id: 5,
       icon: Icon08,
       slug: "#0",
-      title: "T Analytics",
-      excerpt: "Make your Twitter analytics pretty and easy to share.",
+      title: "AWS Infra Dashboard",
+      excerpt: "Sample AWS Infra Dashboard with Next.js and AWS SDK",
       openSource: false,
+      comingSoon: true,
     },
   ];
 
@@ -95,13 +114,13 @@ export default function Projects() {
         <div className="max-w-[700px]">
           <section>
             {/* Page title */}
-            <h1 className="h1 font-aspekta mb-12">Stuff I've built..</h1>
+            <h1 className="h1 font-aspekta mb-12">What I've Built...</h1>
             {/* Page content */}
             <div className="space-y-10">
               {/* Side Hustles cards */}
               <section>
                 <h2 className="font-aspekta text-xl font-[650] mb-6">
-                  Side Hustles
+                  Client Projects
                 </h2>
                 {/* Cards */}
                 <div className="grid sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-5">
@@ -113,7 +132,7 @@ export default function Projects() {
               {/* Client Projects cards */}
               <section>
                 <h2 className="font-aspekta text-xl font-[650] mb-6">
-                  Client Projects
+                  Side Projects
                 </h2>
                 {/* Cards */}
                 <div className="grid sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-5">
