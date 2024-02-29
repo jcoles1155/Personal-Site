@@ -46,7 +46,7 @@ export default function About() {
                   I'm a software engineer with more about 5 years of experience
                   in a variety of domains. For the past few years, I've focused
                   on logistics software in a high paced coding environment -
-                  tinkering with infrastructure, and all things containers.
+                  tinkering with finance, and internal tooling.
                 </p>
                 <p>
                   While there isn't a Wikipedia page about me (sorry folks!),
@@ -64,7 +64,7 @@ export default function About() {
                     className="font-medium text-sky-500 hover:underline"
                     href="#0"
                   >
-                    Admin Panel and Internal Tools
+                    Admin Panel and Internal Tools as well as Finance Platform
                   </a>
                   .
                 </p>
