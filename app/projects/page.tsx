@@ -21,16 +21,6 @@ export default function Projects() {
     {
       id: 1,
       icon: Icon01,
-      slug: "#0",
-      title: "rechart.com",
-      excerpt:
-        "AI Rehab cost and reporting platform for real estate investors and flippers",
-      openSource: false,
-      comingSoon: true,
-    },
-    {
-      id: 1,
-      icon: Icon01,
       slug: "idea-center",
       title: "icvta.com",
       excerpt: "Platform for Idea Center users to manage projects and ideas",
@@ -59,18 +49,27 @@ export default function Projects() {
     {
       id: 4,
       icon: Icon03,
-      slug: "farrout-tradeworks",
+      slug: "farrout",
       title: "farrouttradeworks.com",
       excerpt: "Construction company landing page with NextJS",
       openSource: false,
       comingSoon: true,
-      href: "https://farrouttradeworks.com",
     },
   ];
 
   const items02 = [
     {
       id: 1,
+      icon: Icon01,
+      slug: "#0",
+      title: "rechart.com",
+      excerpt:
+        "AI Rehab cost and reporting platform for real estate investors and flippers",
+      openSource: false,
+      comingSoon: true,
+    },
+    {
+      id: 2,
       icon: Icon04,
       slug: "#0",
       title: "Storybook UI",
@@ -79,7 +78,7 @@ export default function Projects() {
       comingSoon: true,
     },
     {
-      id: 2,
+      id: 3,
       icon: Icon05,
       slug: "#0",
       title: "Amy AI",
@@ -89,7 +88,7 @@ export default function Projects() {
       comingSoon: true,
     },
     {
-      id: 3,
+      id: 4,
       icon: Icon06,
       slug: "#0",
       title: "Convex App",
@@ -98,7 +97,7 @@ export default function Projects() {
       comingSoon: true,
     },
     {
-      id: 4,
+      id: 5,
       icon: Icon07,
       slug: "turbo-temp",
       title: "turbo temp",
@@ -107,7 +106,7 @@ export default function Projects() {
       openSource: true,
     },
     {
-      id: 5,
+      id: 6,
       icon: Icon08,
       slug: "#0",
       title: "AWS Infra Dashboard",
