@@ -63,7 +63,7 @@ export default function Projects() {
       id: 1,
       icon: Icon04,
       slug: "#0",
-      title: "Storybook",
+      title: "Storybook UI",
       excerpt: "Storybook helps you develop, test, and document UIs.",
       openSource: false,
       comingSoon: true,
@@ -72,7 +72,7 @@ export default function Projects() {
       id: 2,
       icon: Icon05,
       slug: "#0",
-      title: "Knowledge AI",
+      title: "Amy AI",
       excerpt:
         "Instantly answers all questions based on your internal knowledge base.",
       openSource: true,
