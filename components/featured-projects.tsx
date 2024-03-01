@@ -8,7 +8,7 @@ export default function FaeturedProjects() {
       {/* Cards */}
       <div className="grid sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-5">
         <a
-          className="rounded-lg border border-slate-200 dark:border-slate-800 dark:bg-gradient-to-t dark:from-slate-800 dark:to-slate-800/30 odd:-rotate-1 even:rotate-1 hover:rotate-0 transition-transform duration-700 hover:duration-100 ease-in-out p-5"
+          className="rounded-lg border border-slate-200  bg-gradient-to-t from-slate-100 dark:border-slate-800 dark:bg-gradient-to-t dark:from-slate-800 dark:to-slate-800/30 odd:-rotate-1 even:rotate-1 hover:rotate-0 transition-transform duration-700 hover:duration-100 ease-in-out p-5"
           href="https://healthequitytracker.org/"
           target="_blank"
           rel="noreferrer"
@@ -46,7 +46,7 @@ export default function FaeturedProjects() {
           </div>
         </a>
         <a
-          className="rounded-lg border border-slate-200 dark:border-slate-800 dark:bg-gradient-to-t dark:from-slate-800 dark:to-slate-800/30 odd:-rotate-1 even:rotate-1 hover:rotate-0 transition-transform duration-700 hover:duration-100 ease-in-out p-5"
+          className="rounded-lg border border-slate-200  bg-gradient-to-t from-slate-100 dark:border-slate-800 dark:bg-gradient-to-t dark:from-slate-800 dark:to-slate-800/30 odd:-rotate-1 even:rotate-1 hover:rotate-0 transition-transform duration-700 hover:duration-100 ease-in-out p-5"
           href="https://wokwi.com/projects/372153001566564353"
           target="_blank"
           rel="noreferrer"

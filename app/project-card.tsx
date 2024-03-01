@@ -18,7 +18,7 @@ interface ItemProps {
 export default function ProjectCard({ item }: ItemProps) {
   return (
     <Link
-      className="rounded-lg border border-slate-200 hover:border-slate-300 dark:border-slate-800 dark:hover:border-slate-700 dark:bg-gradient-to-t dark:from-slate-800 dark:to-slate-800/30 transition-color ease-in-out p-5 group"
+      className="rounded-lg border border-slate-300 hover:border-slate-400 bg-gradient-to-t from-slate-100 dark:border-slate-800 dark:hover:border-slate-700 dark:bg-gradient-to-t dark:from-slate-800 dark:to-slate-800/30 transition-color ease-in-out p-5 group"
       href={`/projects/${item.slug}`}
     >
       <div className="flex flex-col h-full">
