@@ -64,10 +64,11 @@ export default function FaeturedProjects() {
                 </svg>
               </div>
               <div className="text-lg font-aspekta font-[650] mb-1">
-                Simon Says
+                Simon Says (Coming Soon!)
               </div>
               <p className="text-sm text-slate-500 dark:text-slate-400 mb-2">
-                ESP32 Simon Says Game
+                4 player DDR style ESP32 Simon Says Game modeled after this
+                project
               </p>
             </div>
             <div className="text-sky-500 flex justify-end">

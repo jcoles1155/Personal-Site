@@ -28,12 +28,12 @@ export default function ProjectCard({ item }: ItemProps) {
               <Image src={item.icon} width={18} alt={item.title} />
             </div>
             {item.comingSoon && (
-              <div className="text-xs inline-flex items-center font-medium bg-purple-200 text-purple-600 rounded-full text-center px-2 h-5">
+              <div className="text-xs inline-flex items-center font-medium bg-red-200 text-red-600 rounded-full text-center px-2 h-5">
                 Coming Soon
               </div>
             )}
             {item.openSource && (
-              <div className="text-xs inline-flex items-center font-medium bg-green-100 text-green-600 rounded-full text-center px-2 h-5">
+              <div className="text-xs inline-flex items-center font-medium bg-blue-100 text-blue-600 rounded-full text-center px-2 h-5">
                 Open-Source
               </div>
             )}
