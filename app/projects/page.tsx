@@ -49,7 +49,7 @@ export default function Projects() {
     {
       id: 4,
       icon: Icon03,
-      slug: "farrout",
+      slug: "farr-out-tradeworks",
       title: "farrouttradeworks.com",
       excerpt: "Construction company landing page with NextJS",
       openSource: false,
