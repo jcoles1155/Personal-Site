@@ -5,6 +5,7 @@ import { Metadata } from "next";
 import WidgetNewsletter from "@/components/widget-newsletter";
 import WidgetPosts from "@/components/widget-posts";
 import { Mdx } from "@/components/mdx/mdx";
+import { format } from "date-fns";
 
 export async function generateStaticParams() {
   return allProjects.map((project) => ({
@@ -66,7 +67,9 @@ export default async function SingleProject({
               <div className="flex items-center justify-between mb-1">
                 {/* Post date */}
                 <div className="text-xs text-slate-500 uppercase">
-                  {project.createdAt ? "Open Source" : "Private"}
+                  {project.createdAt
+                    ? format(new Date(project.createdAt), "MMMM dd, yyyy")
+                    : "Private"}
                 </div>
               </div>
               {/* Post title */}

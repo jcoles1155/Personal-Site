@@ -10,8 +10,8 @@ import { sql } from "@vercel/postgres";
 import PostsSection from "../app/posts/postsSection";
 
 export const metadata = {
-  title: "Home - DevSpace",
-  description: "Page description",
+  title: "JC Tech Blog",
+  description: "JC Tech Blog - A blog about tech, startups, and coding.",
 };
 
 export default async function Home() {

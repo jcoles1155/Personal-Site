@@ -27,8 +27,8 @@ export default function Subscribe() {
               {/* Page content */}
               <div className="text-slate-500 dark:text-slate-400 space-y-8">
                 <p className="text-lg">
-                  This newsletter is written by JC Coles. Here is what to expect
-                  by subscribing:
+                  I put most of my thoughts into Two Trees Digital. Feel free to
+                  check them out by subscribing:
                 </p>
                 <ul className="space-y-4">
                   <li className="flex items-start">
