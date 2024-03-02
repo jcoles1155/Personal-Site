@@ -31,7 +31,7 @@ export default function Projects() {
       id: 2,
       icon: Icon02,
       slug: "#0",
-      title: "yamhillridge.com",
+      title: "yamhillridge.farm",
       excerpt: "React Three Fiber 3D experience for a farm in Oregon",
       openSource: false,
       comingSoon: true,
@@ -53,7 +53,7 @@ export default function Projects() {
       title: "farrouttradeworks.com",
       excerpt: "Construction company landing page with NextJS",
       openSource: false,
-      comingSoon: true,
+      comingSoon: false,
     },
   ];
 
@@ -71,17 +71,17 @@ export default function Projects() {
     {
       id: 2,
       icon: Icon04,
-      slug: "#0",
-      title: "Storybook UI",
-      excerpt: "Storybook helps you develop, test, and document UIs.",
+      slug: "two-trees-digital",
+      title: "twotrees.digital",
+      excerpt: "Agency Site in Next.js and Tailwind CSS",
       openSource: false,
-      comingSoon: true,
+      comingSoon: false,
     },
     {
       id: 3,
       icon: Icon05,
       slug: "#0",
-      title: "Amy AI",
+      title: "amy.ai",
       excerpt:
         "Instantly answers all questions based on your internal knowledge base.",
       openSource: true,
