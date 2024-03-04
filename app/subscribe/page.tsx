@@ -33,8 +33,8 @@ export default function Subscribe() {
               {/* Page content */}
               <div className="text-slate-500 dark:text-slate-400 space-y-8">
                 <p className="text-lg">
-                  I put most of my thoughts into Two Trees Digital. Feel free to
-                  check them out by subscribing:
+                  I put tech and business resources on the Two Trees Digital
+                  newsletter. Get access by subscribing!
                 </p>
                 <ul className="space-y-4">
                   <li className="flex items-start">
