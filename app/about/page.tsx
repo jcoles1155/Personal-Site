@@ -66,9 +66,9 @@ export default function About() {
                   I grew up in Bakersfield California, and after bouncin around
                   from San Diego to Costa Mesa catching as many waves as I
                   could; I landed in Ventura - the land of the point break -
-                  where I currently reside! Fun facts are I've worked in the
-                  Beer and wine industry in many capacities, and love to play
-                  music with friends!
+                  where I currently still reside! Fun facts are I've worked in
+                  the beer and wine industry in many capacities, and love to
+                  play music with friends!
                 </p>
                 <p>
                   While there isn't a Wikipedia page about me (sorry folks!),
