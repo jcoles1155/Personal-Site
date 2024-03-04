@@ -3,8 +3,6 @@ import WidgetNewsletter from "@/components/widget-newsletter";
 import WidgetSponsor from "@/components/widget-sponsor";
 import AboutImg from "@/public/images/personal_website_header.png";
 import Experience from "@/components/experience";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faInstagram } from "@fortawesome/free-solid-svg-icons";
 
 export const metadata = {
   title: "About - DevSpace",
