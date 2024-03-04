@@ -57,7 +57,7 @@ export default function About() {
                   Lil Bio
                 </h2>
                 <p>
-                  I'm a software engineer with about 10 years of experience in a
+                  I'm a software engineer with about 5 years of experience in a
                   variety of domains. For the past few years, I've built
                   logistics software with Curri in a high paced coding
                   environment - working with finance, and internal tooling.
