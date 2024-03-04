@@ -31,11 +31,11 @@ export default function Hero() {
           <p>
             Hit me up on{" "}
             {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+            <button className="btn-sm text-slate-100 bg-sky-500 hover:bg-sky-600">
               <a
                 href={"https://www.linkedin.com/in/nicholas-jc-coles-314495a6/"}
               >
-                the socials{" "}
+                <strong>the socials</strong>{" "}
               </a>
             </button>{" "}
             or{" "}

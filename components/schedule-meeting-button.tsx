@@ -27,7 +27,7 @@ export default function ScheduleMeetingButton() {
       {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
       <button
         onClick={() => toggle(!show)}
-        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        className="btn-sm text-slate-100 bg-sky-500 hover:bg-sky-600"
       >
         <FontAwesomeIcon icon={faPhone} className="mr-2 max-sm:hidden" />
         Schedule Call

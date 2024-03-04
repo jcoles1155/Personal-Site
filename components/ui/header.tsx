@@ -17,9 +17,6 @@ export default function Header() {
           {/* If current page === /subscribe then hide */}
           {pathname !== "/subscribe" && <ScheduleMeetingButton />}
 
-          {/* Light switch */}
-          <ThemeToggle />
-
           {/* Button */}
           {pathname !== "/subscribe" && (
             <Link
@@ -29,6 +26,9 @@ export default function Header() {
               Contact
             </Link>
           )}
+
+          {/* Light switch */}
+          <ThemeToggle />
         </div>
       </div>
     </header>
