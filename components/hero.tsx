@@ -17,9 +17,10 @@ export default function Hero() {
           />
           <h1 className="h1 font-aspekta mb-5">
             <span className="inline-flex relative text-sky-500 before:absolute before:inset-0 before:bg-sky-200 dark:before:bg-sky-500 before:opacity-30 before:-z-10 before:-rotate-2 before:translate-y-1/4">
-              code, surf, music,
+              code. surf. music.
             </span>{" "}
-            and <strong>occassionally</strong> some op-ed.
+            <br />
+            <strong>occassionally</strong> some op-ed.
           </h1>
           <p className="text-lg text-slate-500 dark:text-slate-400">
             You can usually find me blazing the PCH looking for a wave, writing
