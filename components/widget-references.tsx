@@ -6,7 +6,7 @@ import Arjan from "@/public/images/arjan_s.jpeg";
 
 export default function WidgetReferences() {
   return (
-    <div className="rounded-lg border border-slate-200 dark:border-slate-800 dark:bg-gradient-to-t dark:from-slate-800 dark:to-slate-800/30 odd:rotate-1 even:-rotate-1 p-5">
+    <div className="rounded-lg border from-slate-100 bg-gradient-to-t border-slate-200 dark:border-slate-800 dark:bg-gradient-to-t dark:from-slate-800 dark:to-slate-800/30 odd:rotate-1 even:-rotate-1 p-5">
       <div className="font-aspekta font-[650] mb-3">References</div>
       <ul className="space-y-3">
         <li>
