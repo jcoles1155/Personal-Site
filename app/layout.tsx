@@ -5,6 +5,7 @@ import localFont from "next/font/local";
 import Theme from "./theme-provider";
 import SideNavigation from "@/components/ui/side-navigation";
 import Header from "@/components/ui/header";
+import Head from "next/head";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -40,6 +41,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       {/* suppressHydrationWarning: https://github.com/vercel/next.js/issues/44343 */}
+
       <body
         className={`${inter.variable} ${aspekta.variable} font-inter antialiased bg-green-100 text-slate-800 dark:bg-slate-900 dark:text-slate-200 tracking-tight`}
       >
