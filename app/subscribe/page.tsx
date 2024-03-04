@@ -31,10 +31,6 @@ export default function Subscribe() {
               </h1>
               {/* Page content */}
               <div className="text-slate-500 dark:text-slate-400 space-y-8">
-                <p className="text-lg">
-                  I put tech and business resources on the Two Trees Digital
-                  newsletter. Get access by subscribing!
-                </p>
                 <ul className="space-y-4">
                   <li className="flex items-start">
                     {/* biome-ignore lint/a11y/noSvgWithoutTitle: <explanation> */}
