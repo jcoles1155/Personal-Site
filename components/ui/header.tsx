@@ -23,7 +23,7 @@ export default function Header() {
               className="btn-sm text-slate-100 bg-sky-500 hover:bg-sky-600"
               href="/subscribe"
             >
-              Contact
+              Subscribe
             </Link>
           )}
 
