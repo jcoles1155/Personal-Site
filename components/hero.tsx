@@ -42,7 +42,7 @@ export default function Hero() {
             <Link href={"/subscribe"}>
               <strong>schedule a call</strong>
             </Link>{" "}
-            to chat!
+            for work inquiries!
           </p>
         </div>
       </div>
