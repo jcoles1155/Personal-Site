@@ -94,7 +94,7 @@ export default function Subscribe() {
                     {/* <p className="text-xs text-slate-500 mt-3 italic">Thanks for subscribing!</p> */}
                   </form>
                   <br />
-                  <div className="flex items-center justify-center">
+                  <div className="flex items-center justify-center lg:justify-start">
                     <h2>
                       <div className="mr-6">Or let's chat!</div>
                     </h2>
