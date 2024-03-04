@@ -9,8 +9,6 @@ import Avatar05 from "@/public/images/avatar-05.jpg";
 import Testimonial01 from "@/public/images/testimonial-01.jpg";
 import Testimonial02 from "@/public/images/testimonial-02.jpg";
 import ScheduleMeetingButton from "@/components/schedule-meeting-button";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPhone } from "@fortawesome/free-solid-svg-icons";
 
 export const metadata = {
   title: "About - DevSpace",
@@ -60,6 +58,7 @@ export default function Subscribe() {
                     </span>
                   </li>
                   <li className="flex items-start">
+                    {/* biome-ignore lint/a11y/noSvgWithoutTitle: <explanation> */}
                     <svg
                       className="w-3 h-3 fill-current text-sky-500 mr-3 mt-1.5 shrink-0"
                       viewBox="0 0 12 12"
