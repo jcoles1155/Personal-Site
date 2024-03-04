@@ -123,21 +123,23 @@ export default function About() {
                 </h2>
                 <p>
                   I'm excited to connect with anyone looking to build, or who
-                  needs work via{" "}
+                  needs work.
+                  <br />
+                  Hit me up via{" "}
                   <a
                     className="font-medium text-sky-500 hover:underline"
                     href="mailto:jcoles1155@gmail.com"
                   >
                     email
                   </a>{" "}
-                  and{" "}
+                  or{" "}
                   <a
                     className="font-medium text-sky-500 hover:underline"
                     href="https://www.linkedin.com/in/nicholas-jc-coles-314495a6/"
                   >
                     LinkedIn
                   </a>{" "}
-                  to chat about projects and ideas.
+                  to chat about projects ideas!
                 </p>
               </div>
             </div>
