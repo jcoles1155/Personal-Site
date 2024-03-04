@@ -41,7 +41,12 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       {/* suppressHydrationWarning: https://github.com/vercel/next.js/issues/44343 */}
-
+      <Head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="JC Tech Blog" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <body
         className={`${inter.variable} ${aspekta.variable} font-inter antialiased bg-green-100 text-slate-800 dark:bg-slate-900 dark:text-slate-200 tracking-tight`}
       >
