@@ -19,11 +19,11 @@ export default function Resume() {
         <div className="max-w-[700px]">
           <section>
             {/* Page title */}
-            <h1 className="h1 font-aspekta mb-12">My resume</h1>
+            <h1 className="h1 font-aspekta mb-12">Work and Education</h1>
             {/* Page content */}
             <div className="text-slate-500 dark:text-slate-400 space-y-12">
-              <Education />
               <Experience />
+              <Education />
               {/* <Awards /> */}
               {/* <Recommendations /> */}
             </div>
