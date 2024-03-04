@@ -18,6 +18,8 @@
     "@builder.io/dev-tools": "^0.2.14",
     "@builder.io/react": "^3.2.4",
     "@builder.io/sdk": "^2.2.2",
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@prisma/client": "^5.9.1",
     "@types/node": "^20.10.4",
     "@types/react": "^18.2.42",
