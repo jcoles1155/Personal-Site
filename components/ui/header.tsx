@@ -1,13 +1,11 @@
 import Link from "next/link";
 import ThemeToggle from "./theme-toggle";
-import ScheduleMeetingButton from "../schedule-meeting-button";
 
 export default function Header() {
   return (
     <header>
       <div className="flex items-center justify-between h-16 before:block">
         <div className="grow flex justify-end space-x-4">
-          <ScheduleMeetingButton />
           {/* Search form */}
           <form className="w-full max-w-[276px]">
             <div className="flex flex-wrap">
@@ -22,6 +20,7 @@ export default function Header() {
                     className="form-input py-1 w-full pl-10"
                   />
                   <div className="absolute inset-0 right-auto flex items-center justify-center">
+                    {/* biome-ignore lint/a11y/noSvgWithoutTitle: <explanation> */}
                     <svg
                       className="w-4 h-4 shrink-0 mx-3"
                       viewBox="0 0 16 16"

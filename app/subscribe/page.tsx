@@ -8,6 +8,7 @@ import Avatar04 from "@/public/images/avatar-04.jpg";
 import Avatar05 from "@/public/images/avatar-05.jpg";
 import Testimonial01 from "@/public/images/testimonial-01.jpg";
 import Testimonial02 from "@/public/images/testimonial-02.jpg";
+import ScheduleMeetingButton from "@/components/schedule-meeting-button";
 
 export const metadata = {
   title: "About - DevSpace",
@@ -23,7 +24,9 @@ export default function Subscribe() {
           <div className="space-y-10">
             <section>
               {/* Page title */}
-              <h1 className="h1 font-aspekta mb-5">Never miss an update ✨</h1>
+              <h1 className="h1 font-aspekta mb-5">
+                Schedule a 30 min, or check out the newsletter!
+              </h1>
               {/* Page content */}
               <div className="text-slate-500 dark:text-slate-400 space-y-8">
                 <p className="text-lg">
@@ -84,6 +87,13 @@ export default function Subscribe() {
                     {/* Success message */}
                     {/* <p className="text-xs text-slate-500 mt-3 italic">Thanks for subscribing!</p> */}
                   </form>
+                  <br />
+                  <div className="flex items-center justify-center">
+                    <div className="align-center">
+                      <ScheduleMeetingButton />
+                    </div>
+                  </div>
+
                   <div className="flex items-center mt-5">
                     <div className="inline-flex -space-x-3 -ml-0.5">
                       <Image

@@ -30,15 +30,15 @@ export default function ScheduleMeetingButton() {
         className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
       >
         <FontAwesomeIcon icon={faPhone} className="mr-2" />
-        Schedule a meeting
+        Schedule a 30
       </button>
 
       <div className={"align-middle"}>
         {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
         <dialog
           ref={ref}
+          className={"w-3/4 lg:w-5/6"}
           style={{
-            width: "50%",
             height: "800px",
             position: "relative",
             //   transform: "translate(-50%, -50%)",
