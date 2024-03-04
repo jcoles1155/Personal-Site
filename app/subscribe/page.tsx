@@ -26,10 +26,10 @@ export default function Subscribe() {
           <div className="space-y-10">
             <section>
               {/* Page title */}
-              <h1 className="h1 font-aspekta mb-5">
+              <h2 className="h2 font-aspekta mb-5">
                 Schedule a 30 minute call, or check out the newsletter for tech
                 thoughts!
-              </h1>
+              </h2>
               {/* Page content */}
               <div className="text-slate-500 dark:text-slate-400 space-y-8">
                 <p className="text-lg">
