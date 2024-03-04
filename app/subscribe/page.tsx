@@ -27,7 +27,7 @@ export default function Subscribe() {
             <section>
               {/* Page title */}
               <h1 className="h1 font-aspekta mb-5">
-                Schedule a ute call, or check out the newsletter!
+                Schedule a 30 minute call, or check out the newsletter!
               </h1>
               {/* Page content */}
               <div className="text-slate-500 dark:text-slate-400 space-y-8">
@@ -37,6 +37,7 @@ export default function Subscribe() {
                 </p>
                 <ul className="space-y-4">
                   <li className="flex items-start">
+                    {/* biome-ignore lint/a11y/noSvgWithoutTitle: <explanation> */}
                     <svg
                       className="w-3 h-3 fill-current text-sky-500 mr-3 mt-1.5 shrink-0"
                       viewBox="0 0 12 12"
@@ -44,9 +45,10 @@ export default function Subscribe() {
                     >
                       <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                     </svg>
-                    <span>High Groth Startup Opinion.</span>
+                    <span>Weekly posts</span>
                   </li>
                   <li className="flex items-start">
+                    {/* biome-ignore lint/a11y/noSvgWithoutTitle: <explanation> */}
                     <svg
                       className="w-3 h-3 fill-current text-sky-500 mr-3 mt-1.5 shrink-0"
                       viewBox="0 0 12 12"
@@ -55,8 +57,7 @@ export default function Subscribe() {
                       <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                     </svg>
                     <span>
-                      Actionable advice for engineering managers, software
-                      engineers and tech teams.
+                      Actionable advice for engineerings, and tech teams.
                     </span>
                   </li>
                   <li className="flex items-start">
@@ -83,6 +84,7 @@ export default function Subscribe() {
                         placeholder="Your email"
                         aria-label="Your email\u2026"
                       />
+                      {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
                       <button className="btn text-white bg-sky-500 hover:bg-sky-600">
                         Subscribe
                       </button>
