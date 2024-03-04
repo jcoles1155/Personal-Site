@@ -63,7 +63,7 @@ export default function About() {
                   environment - working with finance, and internal tooling.
                 </p>
                 <p>
-                  Grew up in Bakersfield California, and after bouncin around
+                  I grew up in Bakersfield California, and after bouncin around
                   from San Diego to Costa Mesa catching as many waves as I
                   could; I landed in Ventura - the land of the point break -
                   where I currently reside! Fun facts are I've worked in the
