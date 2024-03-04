@@ -48,7 +48,7 @@ export default function PostsSection() {
 
   return (
     <section>
-      <h2 className="font-aspekta text-xl font-[650] mb-3">Latest Articles</h2>
+      <h2 className="font-aspekta text-xl font-[650] mb-3">Latest</h2>
 
       {/* Filters */}
       <ul className="flex flex-wrap text-sm border-b border-slate-100 dark:border-slate-800">
