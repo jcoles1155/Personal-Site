@@ -48,8 +48,8 @@ export default function Education() {
             <div className="absolute left-0 h-14 w-14 flex items-center justify-center border border-slate-200 dark:border-slate-800 dark:bg-gradient-to-t dark:from-slate-800 dark:to-slate-800/30 bg-white dark:bg-slate-900 rounded-full">
               <Image
                 src={VCLogo}
-                width={24}
-                height={24}
+                width={58}
+                height={58}
                 alt="Ventura College"
               />
             </div>
