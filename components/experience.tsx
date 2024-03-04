@@ -67,8 +67,8 @@ export default function Experience() {
               </div>
               <div className="text-sm text-slate-500 dark:text-slate-400">
                 Worked with clients to build web applications and websites. I
-                specialized in React, Node, and Express, and built a few
-                e-commerce sites using Shopify and WordPress.
+                specialized in React and built a few e-commerce sites using
+                Shopify and WordPress.
               </div>
             </div>
           </div>
