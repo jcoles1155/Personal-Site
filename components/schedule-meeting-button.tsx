@@ -29,7 +29,7 @@ export default function ScheduleMeetingButton() {
         onClick={() => toggle(!show)}
         className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
       >
-        <FontAwesomeIcon icon={faPhone} className="mr-2" />
+        <FontAwesomeIcon icon={faPhone} className="mr-2 max-sm:hidden" />
         Schedule Call
       </button>
 
