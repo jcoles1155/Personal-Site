@@ -96,10 +96,7 @@ export default function Subscribe() {
                   <br />
                   <div className="flex items-center justify-center">
                     <h2>
-                      <div className="mr-6">
-                        <FontAwesomeIcon icon={faPhone} className="mr-2" />
-                        Or let's chat!
-                      </div>
+                      <div className="mr-6">Or let's chat!</div>
                     </h2>
                     <div className="align-center">
                       <ScheduleMeetingButton />

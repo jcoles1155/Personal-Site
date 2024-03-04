@@ -30,7 +30,7 @@ export default function ScheduleMeetingButton() {
         className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
       >
         <FontAwesomeIcon icon={faPhone} className="mr-2" />
-        Schedule 30
+        Schedule Call
       </button>
 
       <div className={"align-middle"}>
