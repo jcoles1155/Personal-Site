@@ -86,17 +86,7 @@ export default function Subscribe() {
                     {/* Success message */}
                     {/* <p className="text-xs text-slate-500 mt-3 italic">Thanks for subscribing!</p> */}
                   </form>
-                  <br />
-                  <div className="flex items-center justify-center lg:justify-start">
-                    <h2>
-                      <div className="mr-6">Or let's chat!</div>
-                    </h2>
-                    <div className="align-center">
-                      <ScheduleMeetingButton />
-                    </div>
-                  </div>
-
-                  <div className="flex items-center mt-5">
+                  <div className="flex items-center justify-center  mt-5">
                     <div className="inline-flex -space-x-3 -ml-0.5">
                       <Image
                         className="rounded-full border-2 border-white dark:border-slate-800 box-content"
@@ -136,6 +126,15 @@ export default function Subscribe() {
                     </div>
                     <div className="text-sm text-slate-500 ml-3">
                       Join the community!
+                    </div>
+                  </div>
+                  <br />
+                  <div className="flex items-center justify-center lg:justify-start">
+                    <h2>
+                      <div className="mr-6">Or let's chat!</div>
+                    </h2>
+                    <div className="align-center">
+                      <ScheduleMeetingButton />
                     </div>
                   </div>
                 </div>
