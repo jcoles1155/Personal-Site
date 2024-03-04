@@ -108,10 +108,9 @@ export default function About() {
                   <strong className="font-medium text-slate-800 dark:text-slate-100">
                     I am responsible for leading
                   </strong>{" "}
-                  the development of client projects, and ensuring that the
-                  projects are completed on time and within budget, while also
-                  providing technical support to help them understand the
-                  technical aspects of their projects.
+                  the development of client projects, ensuring projects meet
+                  deadlines, and are within budget, while also providing
+                  technical support as needed.
                 </p>
               </div>
 
