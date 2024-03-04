@@ -9,6 +9,8 @@ import Avatar05 from "@/public/images/avatar-05.jpg";
 import Testimonial01 from "@/public/images/testimonial-01.jpg";
 import Testimonial02 from "@/public/images/testimonial-02.jpg";
 import ScheduleMeetingButton from "@/components/schedule-meeting-button";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPhone } from "@fortawesome/free-solid-svg-icons";
 
 export const metadata = {
   title: "About - DevSpace",
@@ -89,6 +91,12 @@ export default function Subscribe() {
                   </form>
                   <br />
                   <div className="flex items-center justify-center">
+                    <h2>
+                      <div className="mr-6">
+                        <FontAwesomeIcon icon={faPhone} className="mr-2" />
+                        Or let's talk tech!
+                      </div>
+                    </h2>
                     <div className="align-center">
                       <ScheduleMeetingButton />
                     </div>
