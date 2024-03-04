@@ -5,9 +5,6 @@ import Image from "next/image";
 export default function Experience() {
   return (
     <div className="space-y-8">
-      <h2 className="h3 font-aspekta text-slate-800 dark:text-slate-100">
-        Work Experience
-      </h2>
       <ul className="space-y-8">
         {/* Item */}
         <li className="relative group">
