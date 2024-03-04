@@ -1,7 +1,8 @@
 import Image from "next/image";
 
-import Reference01 from "@/public/images/reference-01.jpg";
-import Reference02 from "@/public/images/reference-02.jpg";
+import Brian from "@/public/images/brian_g.jpeg";
+import Noah from "@/public/images/noah_t.jpeg";
+import Arjan from "@/public/images/arjan_s.jpeg";
 
 export default function WidgetReferences() {
   return (
@@ -16,7 +17,7 @@ export default function WidgetReferences() {
             <div className="grow flex items-center space-x-3 truncate">
               <Image
                 className="rounded-full"
-                src={Reference01}
+                src={Brian}
                 width={32}
                 height={32}
                 alt="Mr. Mark Smularkov"
@@ -31,13 +32,14 @@ export default function WidgetReferences() {
               </div>
             </div>
             <div className="shrink-0 text-sky-500">
+              {/* biome-ignore lint/a11y/noSvgWithoutTitle: <explanation> */}
               <svg
                 className="fill-current -rotate-45 group-hover:rotate-0 transition-transform ease-out"
                 xmlns="http://www.w3.org/2000/svg"
                 width="14"
                 height="12"
               >
-                <path d="M9.586 5 6.293 1.707 7.707.293 13.414 6l-5.707 5.707-1.414-1.414L9.586 7H0V5h9.586Z"></path>
+                <path d="M9.586 5 6.293 1.707 7.707.293 13.414 6l-5.707 5.707-1.414-1.414L9.586 7H0V5h9.586Z" />
               </svg>
             </div>
           </a>
@@ -50,7 +52,7 @@ export default function WidgetReferences() {
             <div className="grow flex items-center space-x-3 truncate">
               <Image
                 className="rounded-full"
-                src={Reference02}
+                src={Arjan}
                 width={32}
                 height={32}
                 alt="Jame Kulls"
@@ -65,13 +67,14 @@ export default function WidgetReferences() {
               </div>
             </div>
             <div className="shrink-0 text-sky-500">
+              {/* biome-ignore lint/a11y/noSvgWithoutTitle: <explanation> */}
               <svg
                 className="fill-current -rotate-45 group-hover:rotate-0 transition-transform ease-out"
                 xmlns="http://www.w3.org/2000/svg"
                 width="14"
                 height="12"
               >
-                <path d="M9.586 5 6.293 1.707 7.707.293 13.414 6l-5.707 5.707-1.414-1.414L9.586 7H0V5h9.586Z"></path>
+                <path d="M9.586 5 6.293 1.707 7.707.293 13.414 6l-5.707 5.707-1.414-1.414L9.586 7H0V5h9.586Z" />
               </svg>
             </div>
           </a>
@@ -84,10 +87,10 @@ export default function WidgetReferences() {
             <div className="grow flex items-center space-x-3 truncate">
               <Image
                 className="rounded-full"
-                src={Reference02}
+                src={Noah}
                 width={32}
                 height={32}
-                alt="Jame Kulls"
+                alt="Noah Tutak"
               />
               <div className="truncate">
                 <div className="font-aspekta font-[650] text-sm truncate mb-1">
@@ -99,13 +102,14 @@ export default function WidgetReferences() {
               </div>
             </div>
             <div className="shrink-0 text-sky-500">
+              {/* biome-ignore lint/a11y/noSvgWithoutTitle: <explanation> */}
               <svg
                 className="fill-current -rotate-45 group-hover:rotate-0 transition-transform ease-out"
                 xmlns="http://www.w3.org/2000/svg"
                 width="14"
                 height="12"
               >
-                <path d="M9.586 5 6.293 1.707 7.707.293 13.414 6l-5.707 5.707-1.414-1.414L9.586 7H0V5h9.586Z"></path>
+                <path d="M9.586 5 6.293 1.707 7.707.293 13.414 6l-5.707 5.707-1.414-1.414L9.586 7H0V5h9.586Z" />
               </svg>
             </div>
           </a>

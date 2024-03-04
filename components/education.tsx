@@ -1,7 +1,8 @@
 import Image from "next/image";
 
-import EducationIcon01 from "@/public/images/education-icon-01.svg";
-import EducationIcon02 from "@/public/images/education-icon-02.svg";
+import GALogo from "@/public/images/ga_logo.webp";
+import VCLogo from "@/public/images/vc_logo.jpeg";
+import USDLogo from "@/public/images/usd_logo2.webp";
 
 export default function Education() {
   return (
@@ -14,12 +15,14 @@ export default function Education() {
         <li className="relative group">
           <div className="flex items-start before:absolute before:left-0 before:h-full before:w-px before:bg-slate-200 before:dark:bg-slate-800 before:self-start before:ml-[28px] before:-translate-x-1/2 before:translate-y-8 before:group-last-of-type:hidden">
             <div className="absolute left-0 h-14 w-14 flex items-center justify-center border border-slate-200 dark:border-slate-800 dark:bg-gradient-to-t dark:from-slate-800 dark:to-slate-800/30 bg-white dark:bg-slate-900 rounded-full">
-              <Image
-                src={EducationIcon01}
-                width={24}
-                height={24}
-                alt="General Assembly"
-              />
+              <a href={"https://generalassemb.ly/"}>
+                <Image
+                  src={GALogo}
+                  width={24}
+                  height={24}
+                  alt="General Assembly"
+                />
+              </a>
             </div>
             <div className="pl-20 space-y-1">
               <div className="text-xs text-slate-500 uppercase">
@@ -44,10 +47,10 @@ export default function Education() {
           <div className="flex items-start before:absolute before:left-0 before:h-full before:w-px before:bg-slate-200 before:dark:bg-slate-800 before:self-start before:ml-[28px] before:-translate-x-1/2 before:translate-y-8 before:group-last-of-type:hidden">
             <div className="absolute left-0 h-14 w-14 flex items-center justify-center border border-slate-200 dark:border-slate-800 dark:bg-gradient-to-t dark:from-slate-800 dark:to-slate-800/30 bg-white dark:bg-slate-900 rounded-full">
               <Image
-                src={EducationIcon01}
+                src={VCLogo}
                 width={24}
                 height={24}
-                alt="Purdue University"
+                alt="Ventura College"
               />
             </div>
             <div className="pl-20 space-y-1">
@@ -73,10 +76,10 @@ export default function Education() {
           <div className="flex items-start before:absolute before:left-0 before:h-full before:w-px before:bg-slate-200 before:dark:bg-slate-800 before:self-start before:ml-[28px] before:-translate-x-1/2 before:translate-y-8 before:group-last-of-type:hidden">
             <div className="absolute left-0 h-14 w-14 flex items-center justify-center border border-slate-200 dark:border-slate-800 dark:bg-gradient-to-t dark:from-slate-800 dark:to-slate-800/30 bg-white dark:bg-slate-900 rounded-full">
               <Image
-                src={EducationIcon02}
-                width={24}
-                height={26}
-                alt="San Jose State UniversitySan Jose State University"
+                src={USDLogo}
+                width={54}
+                height={56}
+                alt="University of San Diego"
               />
             </div>
             <div className="pl-20 space-y-1">
@@ -92,7 +95,7 @@ export default function Education() {
                 University of San Diego
               </div>
               <div className="text-sm text-slate-500 dark:text-slate-400">
-                Played baseball and studied business
+                Studied Computer science and business while playing baseball
               </div>
             </div>
           </div>
