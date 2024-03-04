@@ -28,7 +28,7 @@ export default function Subscribe() {
               {/* Page title */}
               <h1 className="h1 font-aspekta mb-5">
                 Schedule a 30 minute call, or check out the newsletter for tech
-                things!
+                thoughts!
               </h1>
               {/* Page content */}
               <div className="text-slate-500 dark:text-slate-400 space-y-8">
