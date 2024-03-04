@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import WidgetSponsor from "@/components/widget-sponsor";
 import WidgetBook from "@/components/widget-book";
@@ -11,36 +9,14 @@ import Avatar05 from "@/public/images/avatar-05.jpg";
 import Testimonial01 from "@/public/images/testimonial-01.jpg";
 import Testimonial02 from "@/public/images/testimonial-02.jpg";
 import ScheduleMeetingButton from "@/components/schedule-meeting-button";
-import { FormEvent, useState } from "react";
-import axios from "axios";
+import SubscribeForm from "@/components/SubscribeForm";
+
+export const metadata = {
+  title: "Subscribe or Schedule a Call - JC Tech Blog",
+  description: "JC Tech Blog - A blog about tech, startups, and coding.",
+};
 
 export default function Subscribe() {
-  const [email, setEmail] = useState<string>("");
-  const [status, setStatus] = useState<
-    "success" | "error" | "loading" | "idle"
-  >("idle");
-  const [responseMsg, setResponseMsg] = useState<string>("");
-  const [statusCode, setStatusCode] = useState<number>();
-
-  async function handleSubscribe(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setStatus("loading");
-    try {
-      const response = await axios.post("/api/subscribe", { email });
-
-      setStatus("success");
-      setStatusCode(response.status);
-      setEmail("");
-      setResponseMsg(response.data.message);
-    } catch (err) {
-      if (axios.isAxiosError(err)) {
-        setStatus("error");
-        setStatusCode(err.response?.status);
-        setResponseMsg(err.response?.data.error);
-      }
-    }
-  }
-
   return (
     <div className="grow md:flex space-y-8 md:space-y-0 md:space-x-8 pt-12 md:pt-16 pb-16 md:pb-20">
       {/* Middle area */}
@@ -92,36 +68,8 @@ export default function Subscribe() {
                   </li>
                 </ul>
                 <div>
-                  {/* Subscribe form */}
-                  <form onSubmit={handleSubscribe}>
-                    <div className="flex flex-col md:flex-row justify-center max-w-xs mx-auto md:max-w-md md:mx-0">
-                      <input
-                        type="email"
-                        className="form-input w-full mb-2 md:mb-0 md:mr-2"
-                        placeholder="Your email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        disabled={status === "loading"}
-                        aria-label="Your email\u2026"
-                      />
-                      {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
-                      <button
-                        className="btn text-white bg-sky-500 hover:bg-sky-600"
-                        type="submit"
-                        disabled={status === "loading"}
-                      >
-                        Subscribe
-                      </button>
-                    </div>
-                    <div className="server-message pt-4 text-green-600">
-                      {status === "success" ? (
-                        <p className="text-green-600">{responseMsg}</p>
-                      ) : null}
-                      {status === "error" ? (
-                        <p className="text-orange-600">{responseMsg}</p>
-                      ) : null}
-                    </div>
-                  </form>
+                  <SubscribeForm />
+
                   <div className="flex items-center justify-center lg:justify-start mt-5">
                     <div className="inline-flex -space-x-3 -ml-0.5">
                       <Image
