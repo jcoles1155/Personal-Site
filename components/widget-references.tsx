@@ -62,7 +62,7 @@ export default function WidgetReferences() {
                   Arjan Singh
                 </div>
                 <div className="text-xs text-slate-500 dark:text-slate-400">
-                  Head of Product, Curri
+                  Director of Product, Curri
                 </div>
               </div>
             </div>
@@ -97,7 +97,7 @@ export default function WidgetReferences() {
                   Noah Tutak
                 </div>
                 <div className="text-xs text-slate-500 dark:text-slate-400">
-                  Director of Product, Curri
+                  CPO, Curri
                 </div>
               </div>
             </div>
