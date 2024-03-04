@@ -18,8 +18,8 @@ export default function Education() {
               <a href={"https://generalassemb.ly/"}>
                 <Image
                   src={GALogo}
-                  width={24}
-                  height={24}
+                  width={32}
+                  height={32}
                   alt="General Assembly"
                 />
               </a>
