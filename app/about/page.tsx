@@ -18,7 +18,7 @@ export default function About() {
           <section>
             {/* Page title */}
             <h1 className="h1 font-aspekta mb-5">
-              Hi. I'm JC Coles 🤟{" "}
+              Hey there! 🤟{" "}
               <a
                 href="https://www.instagram.com/jc_coles/?hl=en"
                 target="_blank"
