@@ -24,7 +24,7 @@ export default function Experience() {
                 January 2024
               </div>
               <div className="font-aspekta font-[650] text-slate-800 dark:text-slate-100">
-                Full Stack Software Engineer
+                Software Engineer
               </div>
               <a href="https://www.curri.com/" target="_blank" rel="noreferrer">
                 <div className="text-sm font-medium text-slate-800 dark:text-slate-100">
