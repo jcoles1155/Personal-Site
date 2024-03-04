@@ -123,7 +123,7 @@ export default function Projects() {
         <div className="max-w-[700px]">
           <section>
             {/* Page title */}
-            <h1 className="h1 font-aspekta mb-12">What I'm Building..</h1>
+            <h1 className="h1 font-aspekta mb-12">What I'm Building</h1>
             {/* Page content */}
             <div className="space-y-10">
               {/* Side Hustles cards */}
