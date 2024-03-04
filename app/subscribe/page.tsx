@@ -97,7 +97,7 @@ export default function Subscribe() {
                     <h2>
                       <div className="mr-6">
                         <FontAwesomeIcon icon={faPhone} className="mr-2" />
-                        Or let's talk tech!
+                        Or let's chat!
                       </div>
                     </h2>
                     <div className="align-center">
