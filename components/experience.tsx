@@ -33,7 +33,7 @@ export default function Experience() {
               </a>
 
               <div className="text-sm text-slate-500 dark:text-slate-400">
-                Worked in Next, GraphQl, PostgresQl and Prisma, building next
+                Worked in Next, GraphQl, PostgresQl, and Prisma building next
                 generation logistics software. Got the opportunity to contribute
                 to many projects, and authored a couple features that are used
                 system wide.{" "}
