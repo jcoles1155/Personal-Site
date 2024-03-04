@@ -86,7 +86,7 @@ export default function Subscribe() {
                     {/* Success message */}
                     {/* <p className="text-xs text-slate-500 mt-3 italic">Thanks for subscribing!</p> */}
                   </form>
-                  <div className="flex items-center justify-center  mt-5">
+                  <div className="flex items-center justify-center lg:justify-start mt-5">
                     <div className="inline-flex -space-x-3 -ml-0.5">
                       <Image
                         className="rounded-full border-2 border-white dark:border-slate-800 box-content"
