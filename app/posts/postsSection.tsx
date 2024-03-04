@@ -71,7 +71,7 @@ export default function PostsSection() {
 
       {/* Articles list */}
       {postsList.length < 1 ? (
-        <h4 className="text-center text-sm pt-6">No Article Found</h4>
+        <h4 className="text-center text-sm pt-6">Nothing yet 😎</h4>
       ) : (
         ""
       )}
