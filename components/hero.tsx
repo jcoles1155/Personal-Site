@@ -23,7 +23,7 @@ export default function Hero() {
             <strong>occassionally</strong> some op-ed.
           </h1>
           <p className="text-lg text-slate-500 dark:text-slate-400">
-            You can usually find me blazing the PCH looking for a wave, writing
+            You can usually find me driving the PCH looking for a wave, writing
             tunes with friends, or posting up with a book, and a beer at a
             campsite along the 5 on the way to Oregon.
           </p>
