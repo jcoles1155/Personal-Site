@@ -9,6 +9,8 @@ import Avatar05 from "@/public/images/avatar-05.jpg";
 import Testimonial01 from "@/public/images/testimonial-01.jpg";
 import Testimonial02 from "@/public/images/testimonial-02.jpg";
 import ScheduleMeetingButton from "@/components/schedule-meeting-button";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPhone } from "@fortawesome/free-solid-svg-icons";
 
 export const metadata = {
   title: "About - DevSpace",
