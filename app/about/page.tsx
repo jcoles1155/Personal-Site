@@ -80,15 +80,15 @@ export default function About() {
                   Career
                 </h2>
                 <p>
-                  In my role as a Software Engineer for Curri, I was responsible
-                  for developing and maintaining the{" "}
+                  I joined Curri starting the IT department, and eventually
+                  moved to engineering. In my role as a Software Engineer, I was
+                  responsible for developing and maintaining the{" "}
                   <a
                     className="font-medium text-sky-500 hover:underline"
                     href="#0"
                   >
-                    Admin Panel and Internal Tools as well as Finance Platform
+                    admin panel, internal tooling, as well as finance platform
                   </a>
-                  .
                 </p>
                 <p>
                   My work involved developing and testing new features,
