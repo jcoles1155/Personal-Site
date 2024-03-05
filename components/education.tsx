@@ -34,8 +34,8 @@ export default function Education() {
               </div>
             </div>
           </div>
+          <br />
         </li>
-        <br />
         {/* Item */}
         <li className="relative group">
           <div className="flex items-start before:absolute before:left-0 before:h-full before:w-px before:bg-slate-200 before:dark:bg-slate-800 before:self-start before:ml-[28px] before:-translate-x-1/2 before:translate-y-8 before:group-last-of-type:hidden">
