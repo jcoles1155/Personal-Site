@@ -9,6 +9,7 @@ interface Item {
   excerpt: string;
   openSource?: boolean;
   comingSoon?: boolean;
+  href?: string;
 }
 
 interface ItemProps {
@@ -19,13 +20,15 @@ export default function ProjectCard({ item }: ItemProps) {
   return (
     <Link
       className="rounded-lg border border-slate-300 hover:border-slate-400 bg-gradient-to-t from-slate-100 dark:border-slate-800 dark:hover:border-slate-700 dark:bg-gradient-to-t dark:from-slate-800 dark:to-slate-800/30 transition-color ease-in-out p-5 group"
-      href={`/projects/${item.slug}`}
+      href={item?.href ? item?.href : `/projects/${item.slug}`}
     >
       <div className="flex flex-col h-full">
         <div className="grow">
           <div className="flex items-center justify-between space-x-2">
             <div className="h-10 w-10 flex items-center justify-center border border-slate-200 dark:border-slate-700 rounded-full mb-2">
-              <Image src={item.icon} width={18} alt={item.title} />
+              <Link href={`${item.href}`}>
+                <Image src={item.icon} width={18} alt={item.title} />
+              </Link>
             </div>
             {item.comingSoon && (
               <div className="text-xs inline-flex items-center font-medium bg-red-200 text-red-600 rounded-full text-center px-2 h-5">

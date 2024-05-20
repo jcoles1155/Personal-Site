@@ -22,10 +22,11 @@ export default function Projects() {
       id: 1,
       icon: Icon01,
       slug: "idea-center",
-      title: "icvta.com",
+      title: "stembassadors.net",
       excerpt: "Platform for Idea Center users to manage projects and ideas",
       openSource: true,
       comingSoon: true,
+      href: "http://ec2-54-158-149-38.compute-1.amazonaws.com:3000/",
     },
     {
       id: 2,

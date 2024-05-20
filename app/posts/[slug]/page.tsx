@@ -4,8 +4,8 @@ import { allPosts } from "contentlayer/generated";
 import { notFound } from "next/navigation";
 import { Mdx } from "@/components/mdx/mdx";
 import PostDate from "@/components/post-date";
-import WidgetNewsletter from "@/components/widget-newsletter";
-import WidgetSponsor from "@/components/widget-sponsor";
+// import WidgetNewsletter from "@/components/widget-newsletter";
+// import WidgetSponsor from "@/components/widget-sponsor";
 import WidgetPosts from "@/components/widget-posts";
 
 export async function generateStaticParams() {
